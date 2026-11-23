@@ -1,0 +1,2319 @@
+[
+ {
+  "category": "realestate",
+  "city": "Кременчуг",
+  "description": "Клининговая компания из Кременчуга: уборка квартир, домов и офисов, химчистка мебели, мытьё окон, уборка после ремонта. Работает ежедневно с 08:00 до 22:00, телефон +380670006767, сайт cleancity.com.ua. В сети компанию ищут по отзывам перед заказом уборки, чтобы оценить качество и цены.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=cleancity.com.ua&sz=128",
+  "name": "Clean City",
+  "phone": "+380670006767",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске отмечена Active, указаны адрес в Кременчуге, телефон и официальный сайт.",
+  "website": "https://cleancity.com.ua/"
+ },
+ {
+  "category": "realestate",
+  "city": "Белая Церковь",
+  "description": "Строительная компания из Белой Церкви: ремонт квартир и домов, отделочные и строительные работы. Работает пн–пт 08:00–19:00, сб 09:00–16:00, телефон +380508664738, сайт bc-stroy.com.ua. В сети о компании ищут отзывы перед заказом ремонта, так как услуга дорогая и требует предоплаты.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=bc-stroy.com.ua&sz=128",
+  "name": "BC Stroy",
+  "phone": "+380508664738",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске отмечена Active, указаны адрес, телефон и официальный сайт.",
+  "website": "https://bc-stroy.com.ua/"
+ },
+ {
+  "category": "realestate",
+  "city": "Белая Церковь",
+  "description": "Строительная компания «Білд сіті» из Белой Церкви: строительство и ремонт, услуги строительной компании для частных заказчиков. Работает пн–пт 08:00–18:00, телефон +380977000881, сайт buildcity.group. В сети о компании ищут отзывы перед заключением договора на строительство или ремонт.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=buildcity.group&sz=128",
+  "name": "Build City",
+  "phone": "+380977000881",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске отмечена Active, указаны адрес в Белой Церкви, телефон и официальный сайт.",
+  "website": "https://buildcity.group/"
+ },
+ {
+  "category": "shops",
+  "city": "Коломыя",
+  "description": "Магазин строительных материалов «ТЕМПО» в Коломые: продажа стройматериалов для ремонта и строительства. Работает пн–пт 08:00–18:00, сб 08:00–15:00, телефон +380979281235, сайт tempobud.com.ua. В сети магазин ищут по отзывам и ассортименту перед покупкой материалов для ремонта.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=tempobud.com.ua&sz=128",
+  "name": "ТЕМПО",
+  "phone": "+380979281235",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка магазина в поиске отмечена Active, указаны адрес в Коломые, телефон и официальный сайт.",
+  "website": "http://tempobud.com.ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Коломыя",
+  "description": "Компания «БЕСТ Бетон» в Коломые: производство и продажа бетона и строительных материалов. Телефон +380959485044, сайт bestbeton.if.ua. В сети компанию ищут по отзывам перед заказом бетона для строительства, так как важны качество смеси и сроки доставки.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=bestbeton.if.ua&sz=128",
+  "name": "БЕСТ Бетон",
+  "phone": "+380959485044",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске отмечена Active, указаны адрес в Коломые, телефон и официальный сайт.",
+  "website": "http://bestbeton.if.ua/"
+ },
+ {
+  "category": "realestate",
+  "city": "Дрогобыч",
+  "description": "Студия «Гіпсова Ліпнина» (Flagma Decor) из Дрогобыча: гипсовая лепнина и декор для интерьеров, услуги студии дизайна интерьера. Работает пн–пт 09:00–17:00, сб 10:00–14:30, телефон +380967221326, сайт flagmadecor.com. В сети студию ищут по отзывам и фото работ перед заказом декора для дома.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=flagmadecor.com&sz=128",
+  "name": "Flagma Decor",
+  "phone": "+380967221326",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка студии в поиске отмечена Active, указаны адрес в Дрогобыче, телефон и официальный сайт.",
+  "website": "http://flagmadecor.com/"
+ },
+ {
+  "category": "realestate",
+  "city": "Каменец-Подольский",
+  "description": "Студия дизайна интерьеров BLN design из Каменца-Подольского: дизайн-проекты интерьеров квартир и домов. Работает пн–пт 09:00–17:00, телефон +380973910465, официальная страница в Instagram. В сети студию ищут по отзывам и портфолио перед заказом дизайн-проекта.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "BLN design",
+  "phone": "+380973910465",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/bln_design"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: карточка студии в поиске отмечена Active, указаны адрес в Каменце-Подольском, телефон и страница в Instagram.",
+  "website": "https://www.instagram.com/bln_design"
+ },
+ {
+  "category": "shops",
+  "city": "Белая Церковь",
+  "description": "Весільний салон St Valentine (Catarina Kordas) в Белой Церкви: свадебные платья и услуги свадебного салона. Работает вт–сб, телефон +380969542872, сайт catarinakordas.com. В сети салон ищут по отзывам перед выбором свадебного платья, так как покупка дорогая и требует примерки.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=catarinakordas.com&sz=128",
+  "name": "St Valentine",
+  "phone": "+380969542872",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка салона в поиске отмечена Active, указаны адрес в Белой Церкви, телефон и официальный сайт.",
+  "website": "http://catarinakordas.com/"
+ },
+ {
+  "category": "travel",
+  "city": "Каменское",
+  "description": "Туристическое агентство Bon Tur в Каменском: подбор туров, отдых и путешествия. Работает пн–пт 10:00–18:00, сб 10:00–15:00, телефон +380984127945, сайт bontur.nakanikuly.ua. В сети агентство ищут по отзывам перед покупкой тура, так как тур оплачивается заранее.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=bontur.nakanikuly.ua&sz=128",
+  "name": "Bon Tur",
+  "phone": "+380984127945",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка агентства в поиске отмечена Active, указаны адрес в Каменском, телефон и официальный сайт.",
+  "website": "https://bontur.nakanikuly.ua/"
+ },
+ {
+  "category": "travel",
+  "city": "Дрогобыч",
+  "description": "Турагентство Adria-Tur в Дрогобыче: подбор туров и организация путешествий. Работает пн–пт 10:30–17:00, сб 12:00–15:00, телефон +380968289257, сайт adriatur.com.ua. В сети агентство ищут по отзывам перед покупкой тура, чтобы проверить надёжность и условия поездки.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=adriatur.com.ua&sz=128",
+  "name": "Adria-Tur",
+  "phone": "+380968289257",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка агентства в поиске отмечена Active, указаны адрес в Дрогобыче, телефон и официальный сайт.",
+  "website": "http://adriatur.com.ua/"
+ },
+ {
+  "category": "beauty",
+  "city": "Днепр",
+  "description": "Ветеринарная клиника Vet Time в Днепре: опытные ветеринары, современная диагностика, УЗД, рентген, собственная лаборатория с результатами за 15 минут, стерилизация и хирургия, лечение только кошек и собак. Телефоны +380959121244 и +380969121244, сайт vet-time.dp.ua. В сети клинику ищут по отзывам владельцев животных о качестве лечения.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=vet-time.dp.ua&sz=128",
+  "name": "Vet Time",
+  "phone": "+380959121244",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт vet-time.dp.ua открыт и содержит актуальные услуги, запись через Telegram, Viber, Instagram и телефоны.",
+  "website": "https://vet-time.dp.ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Кременчуг",
+  "description": "Сервисный центр Best Service в Кременчуге: ремонт бытовой техники и электроники, продажа техники. Работает пн–пт 09:00–18:00, телефон +380680303737, сайт bsmarket.com.ua. В сети сервис ищут по отзывам перед сдачей техники в ремонт, чтобы оценить цены и сроки.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=bsmarket.com.ua&sz=128",
+  "name": "Best Service",
+  "phone": "+380680303737",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка сервиса в поиске отмечена Active, указаны адрес в Кременчуге, телефон и официальный сайт.",
+  "website": "https://bsmarket.com.ua/"
+ },
+ {
+  "category": "realestate",
+  "city": "Мукачево",
+  "description": "Клининговая компания SIYAY («Сіяй») в Мукачево: профессиональная уборка квартир, домов и офисов. Телефон +380957793889, официальная страница в Instagram. В сети компанию ищут по отзывам перед заказом уборки, чтобы оценить качество и цены.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "SIYAY",
+  "phone": "+380957793889",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/siyay_company"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске отмечена Active, указаны адрес в Мукачево, телефон и страница в Instagram.",
+  "website": "https://www.instagram.com/siyay_company"
+ },
+ {
+  "category": "beauty",
+  "city": "Стрый",
+  "description": "Фотостудия Zebra (Brothers Khoma) в Стрые: фотосъёмка, фотостудия и услуги фотографов. Телефон +380734344228, сайт brotherskhoma.com. В сети студию ищут по отзывам и портфолио перед заказом фотосессии.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=brotherskhoma.com&sz=128",
+  "name": "Brothers Khoma",
+  "phone": "+380734344228",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Карточка фотостудии в поиске содержит адрес в Стрые, телефон и официальный сайт; статус в поиске — Possibly Temporarily Closed, поэтому перед публикацией стоит перепроверить работу студии.",
+  "website": "https://www.brotherskhoma.com/"
+ },
+ {
+  "category": "realestate",
+  "city": "Умань",
+  "description": "Клининговая компания «Чистюля» в Умани: профессиональные услуги уборки в городе и области по предварительной договорённости. Телефон +380930145509, официальная страница в Instagram. В сети компанию ищут по отзывам перед заказом уборки дома или офиса.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Чистюля",
+  "phone": "+380930145509",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/chustylia_klining_uman"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске отмечена Active, указаны адрес в Умани, телефон и страница в Instagram.",
+  "website": "https://www.instagram.com/chustylia_klining_uman"
+ },
+ {
+  "category": "travel",
+  "city": "Дрогобыч",
+  "description": "Турагентство «Поїхали з нами» в Дрогобыче: подбор туров, отдых и путешествия. Работает пн–пт 10:00–19:00, сб 10:00–15:00, телефон +380678559605, сайт poehalisnami.ua. В сети агентство ищут по отзывам перед покупкой тура, так как тур оплачивается заранее.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=poehalisnami.ua&sz=128",
+  "name": "Поїхали з нами",
+  "phone": "+380678559605",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка агентства в поиске отмечена Active, указаны адрес в Дрогобыче, телефон и официальный сайт сети.",
+  "website": "https://www.poehalisnami.ua/"
+ },
+ {
+  "category": "beauty",
+  "city": "Белая Церковь",
+  "description": "Стоматологическая клиника Bilobrov Clinic в Белой Церкви (ул. Полевая, 50): лечение, имплантация, протезирование и другие стоматологические услуги, работает ежедневно. В каталогах указан статус Active и рейтинг 5,0. В сети клиника упоминается как действующая стоматология Белой Церкви с актуальными контактами и графиком работы.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=bc.bilobrov.clinic&sz=128",
+  "name": "Bilobrov Clinic",
+  "phone": "+380973985786",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Статус Active, телефон и сайт подтверждены поиском; рейтинг 5,0 в каталогах.",
+  "website": "https://bc.bilobrov.clinic/"
+ },
+ {
+  "category": "beauty",
+  "city": "Белая Церковь",
+  "description": "Частная стоматологическая клиника Beladent в Белой Церкви, работает с 1991 года; по данным официального сайта, за 34 года услугами воспользовались более 25 000 пациентов. Семейная стоматология для взрослых и детей: терапия, ортопедия, имплантация, 3D-диагностика, лечение под седацией. На сайте опубликованы положительные отзывы пациентов, отмечающих профессионализм врачей и сервис.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=beladent.com.ua&sz=128",
+  "name": "Beladent",
+  "phone": "+380961090707",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт и актуален, телефон подтверждён поиском; клиника работает с 1991 года.",
+  "website": "https://beladent.com.ua/stomat/"
+ },
+ {
+  "category": "beauty",
+  "city": "Белая Церковь",
+  "description": "Современная стоматология Comfort в Белой Церкви (пр. Независимости, 73а): полный спектр услуг — лечение кариеса и каналов, гигиена, имплантация, протезирование, ортодонтия, детская стоматология, лечение под наркозом. Клиника оснащена КТ и цифровой рентген-диагностикой. На официальном сайте много положительных отзывов пациентов о безболезненном лечении и внимательном персонале.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=comfortdent.com.ua&sz=128",
+  "name": "Comfort Dental Clinic",
+  "phone": "+380973344112",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт и актуален, телефон подтверждён поиском; отзывы пациентов на сайте.",
+  "website": "https://comfortdent.com.ua/"
+ },
+ {
+  "category": "beauty",
+  "city": "Белая Церковь",
+  "description": "Клиника современной стоматологии PerioDent в Белой Церкви (ул. Б. Хмельницкого, 1/7): имплантация, брекеты, детская стоматология, виниры, протезирование. Работает пн–сб 08:00–19:00. По данным официального сайта, команда использует передовые технологии для безопасного и комфортного лечения. В сети клиника представлена как действующая, с актуальными контактами.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=periodent.in.ua&sz=128",
+  "name": "PerioDent",
+  "phone": "+380986289898",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт и актуален, телефон и адрес подтверждены поиском.",
+  "website": "https://periodent.in.ua/"
+ },
+ {
+  "category": "beauty",
+  "city": "Белая Церковь",
+  "description": "Стоматология Dentalinna в Белой Церкви (1-й пер. Героев Крут, 32А, массив Леваневского): терапия, протезирование, хирургия, имплантация, эндодонтия, профессиональная чистка. Основатель — Скороход Е. С., главный врач — Скороход Е. В., опыт каждого — 16 лет. На официальном сайте клиника позиционируется как стоматология мировых стандартов с комплексным подходом.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=dentalinna.com.ua&sz=128",
+  "name": "Dentalinna",
+  "phone": "+380974331313",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт и актуален, телефоны подтверждены поиском.",
+  "website": "https://www.dentalinna.com.ua/"
+ },
+ {
+  "category": "beauty",
+  "city": "Мукачево",
+  "description": "Салон красоты Viola в Мукачево (ул. Шевченко, 13), работает ежедневно 07:00–21:00. Парикмахерские и бьюти-услуги. В каталогах указан статус Active, телефон и адрес актуальны. В сети салон упоминается как действующий салон красоты Мукачево с полным графиком работы.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=violamukachevo.com&sz=128",
+  "name": "Viola",
+  "phone": "+380500582175",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Статус Active, телефон и сайт подтверждены поиском.",
+  "website": "https://www.violamukachevo.com/"
+ },
+ {
+  "category": "beauty",
+  "city": "Умань",
+  "description": "Частная стоматологическая клиника Royal Dent в Умани (Киевский пер., 6): лечение зубов и стоматологические услуги, работает пн–пт 09:00–17:00. В каталогах указан статус Active. В сети клиника представлена через Instagram, где публикуются услуги и контакты для записи.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Royal Dent",
+  "phone": "+380969051313",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://instagram.com/royal_dent_uman"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Статус Active, телефон и Instagram подтверждены поиском; собственного сайта не найдено.",
+  "website": "https://instagram.com/royal_dent_uman"
+ },
+ {
+  "category": "beauty",
+  "city": "Умань",
+  "description": "Стоматологическая клиника Династия в Умани (ул. Гайдамацкая, 10), работает пн–пт 09:00–18:30, сб 09:00–15:30. В каталогах указан статус Active. В сети клиника представлена через Instagram с актуальными контактами и графиком работы.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Стоматологическая клиника Династия",
+  "phone": "+380634430847",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://instagram.com/dinastia_dent_uman"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Статус Active, телефон и Instagram подтверждены поиском; собственного сайта не найдено.",
+  "website": "https://instagram.com/dinastia_dent_uman"
+ },
+ {
+  "category": "beauty",
+  "city": "Каменское",
+  "description": "Стоматологическая клиника MDENT в Каменском: два филиала — ул. Сачко, 12 и пр. Нескоренных, 14. Лечение, имплантация, протезирование и другие услуги по доступным ценам, по описанию клиники — по новым стандартам. В каталогах указан статус Active. В сети клиника упоминается как действующая стоматология Каменского.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=mdent.clinic&sz=128",
+  "name": "MDENT",
+  "phone": "+380962000486",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Статус Active, сайт и телефоны филиалов подтверждены поиском.",
+  "website": "https://mdent.clinic/"
+ },
+ {
+  "category": "beauty",
+  "city": "Никополь",
+  "description": "Стоматология Estet Dentistry в Никополе (филиал также во Вроцлаве, Польша): полный спектр услуг — от профилактики и лечения до имплантации и эстетической стоматологии, индивидуальный подход. По данным официального сайта, клиника работает в Украине и Польше. В сети представлена как действующая современная стоматология.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=estetdentist.com&sz=128",
+  "name": "Estet Dentistry",
+  "phone": "+380503411555",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт и телефон филиала в Никополе подтверждены поиском.",
+  "website": "https://www.estetdentist.com/"
+ },
+ {
+  "category": "beauty",
+  "city": "Трускавец",
+  "description": "Салон красоты №1 Чародейка в Трускавце (ул. Героев УПА, 2), работает пн–сб 08:30–20:00 (сб до 18:00). Парикмахерские, косметологические и бьюти-услуги для гостей курортного города. В каталогах указан статус Active. В сети салон упоминается как действующий салон красоты Трускавца.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=salon-krasi-truskavec.com.ua&sz=128",
+  "name": "Салон красоты Чародейка",
+  "phone": "+380677126029",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Статус Active, телефон и сайт подтверждены поиском.",
+  "website": "https://www.salon-krasi-truskavec.com.ua/"
+ },
+ {
+  "category": "beauty",
+  "city": "Хуст",
+  "description": "Стоматологическая клиника V.L.Dent в Хусте: лечение, протезирование и другие стоматологические услуги. Контакты: телефон +38098980200, email info@vldent.com, сайт vldent.com. В справочниках Хуста клиника указана как действующая, с актуальными контактами.",
+  "email": "info@vldent.com",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=vldent.com&sz=128",
+  "name": "V.L.Dent",
+  "phone": "+38098980200",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Телефон, email и сайт подтверждены справочником Хуста.",
+  "website": "https://vldent.com"
+ },
+ {
+  "category": "beauty",
+  "city": "Хуст",
+  "description": "Стоматология Колибри в Хусте (ул. Пирогова, 5а), работает пн–пт 08:00–20:00, сб–вс 09:00–16:00. Стоматологические услуги для взрослых. В каталогах указан статус Active. В сети клиника упоминается как действующая стоматология Хуста с актуальным графиком.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=kolibri-khust.com&sz=128",
+  "name": "Стоматология Колибри",
+  "phone": "+380968055446",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Статус Active, телефон и сайт подтверждены поиском.",
+  "website": "http://kolibri-khust.com/"
+ },
+ {
+  "category": "beauty",
+  "city": "Горишние Плавни",
+  "description": "Барбершоп Гараж в Горишних Плавнях — первый барбершоп города, работает с 2017 года; с 2023 года также под названием Барбершоп 96. Мужские стрижки, стрижка бороды, детские стрижки, бритьё. По данным официального сайта, стрижка — от 450 грн. В сети барбершоп упоминается как действующий, с актуальным прайсом.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=garagebarbershop.net.ua&sz=128",
+  "name": "Барбершоп Гараж",
+  "phone": "",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт и актуален, прайс и история подтверждены сайтом; телефон на сайте не подтверждён поиском.",
+  "website": "https://www.garagebarbershop.net.ua/"
+ },
+ {
+  "category": "beauty",
+  "city": "Дрогобыч",
+  "description": "Женский фитнес-клуб FitCurves в Дрогобыче (ул. Трускавецкая, 36/4): тренировки на гидравлическом оборудовании, занятия для укрепления мышц, танцы, реабилитационные тренировки «Здоровая спина», массаж, марафоны питания. Рейтинг 4,8 на основе 5 отзывов. В сети клуб упоминается как действующий филиал международной сети.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=fitcurves.org&sz=128",
+  "name": "FitCurves Дрогобыч",
+  "phone": "+380936940830",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Статус Active, телефон, сайт филиала и рейтинг 4,8 подтверждены поиском.",
+  "website": "https://fitcurves.org/clubs/page_drohobych_24/"
+ },
+ {
+  "category": "beauty",
+  "city": "Павлоград",
+  "description": "Фитнес-клуб Body Factory в Павлограде (ул. Центральная, 59, 3 этаж), работает ежедневно 09:00–21:00. Тренажёрный зал и фитнес-услуги. В каталогах указан статус Active. В сети клуб представлен через Instagram с актуальными контактами и графиком.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Body Factory",
+  "phone": "+380660326166",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://instagram.com/body_factory_pavlograd"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Статус Active, телефон и Instagram подтверждены поиском; собственного сайта не найдено.",
+  "website": "https://instagram.com/body_factory_pavlograd"
+ },
+ {
+  "category": "beauty",
+  "city": "Коломыя",
+  "description": "Салон красоты Виталия в Коломые (ул. Переяславская, 15), работает пн–сб 09:00–19:00, вс 10:00–15:00. Парикмахерские и бьюти-услуги. В каталогах указан статус Active. В сети салон представлен через Facebook с актуальными контактами.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=facebook.com&sz=128",
+  "name": "Салон красоты Виталия",
+  "phone": "+380976936919",
+  "socials": [
+   {
+    "label": "Facebook",
+    "url": "https://www.facebook.com/salonvitaliya/"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Статус Active, телефон и Facebook подтверждены поиском; собственного сайта не найдено.",
+  "website": "https://www.facebook.com/salonvitaliya/"
+ },
+ {
+  "category": "beauty",
+  "city": "Коломыя",
+  "description": "Салон красоты Shine в Коломые (ул. Симона Петлюры, 18), работает пн–пт 09:00–18:00, сб 09:00–15:00. В каталогах указан статус Active и рейтинг 5,0. В сети салон представлен через Facebook с актуальными контактами и графиком работы.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=facebook.com&sz=128",
+  "name": "Салон красоты Shine",
+  "phone": "+380667806808",
+  "socials": [
+   {
+    "label": "Facebook",
+    "url": "https://www.facebook.com/Shine.kolomya/"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Статус Active, телефон, Facebook и рейтинг 5,0 подтверждены поиском; собственного сайта не найдено.",
+  "website": "https://www.facebook.com/Shine.kolomya/"
+ },
+ {
+  "category": "shops",
+  "city": "Умань",
+  "description": "Мебельная студия в Умани: изготовление мебели на заказ, в том числе кухонь, шкафов и корпусной мебели, с реализованными проектами в городе. Адрес — ул. Шевченко, 23А. В каталогах и на картах компания отмечена как действующая, с актуальным телефоном и страницей в Instagram.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Студия Меблів Умань",
+  "phone": "+380637891750",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/stud.mebli/"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: карточка в поиске со статусом Active, адрес и телефон в Умани, активная страница в Instagram.",
+  "website": "https://www.instagram.com/stud.mebli/"
+ },
+ {
+  "category": "shops",
+  "city": "Белая Церковь",
+  "description": "Студия мебели «Спліт» в Белой Церкви, работает с 2006 года. Изготовление на заказ кухонь, шкафов-купе, стенок, мебели для гостиной, спальни, прихожей, детской и офиса. На сайте представлены кухни под заказ и дизайн-проекты. В каталогах у студии рейтинг 5,0 на основе 8 отзывов.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=split.org.ua&sz=128",
+  "name": "Спліт",
+  "phone": "+380679750850",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт split.org.ua открывается, карточка со статусом Active, телефон и адрес в Белой Церкви.",
+  "website": "http://split.org.ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Коломыя",
+  "description": "Компания MebliKol в Коломые: изготовление мебели на заказ любой сложности — кухни элит-класса, авторские шкафы-купе, мебель для дома и бизнеса, торговые мебли. Предлагает услуги дизайнера, проектирование, монтаж, доставку и гарантию на выполненные работы, сдачу объекта «под ключ».",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=meblikol.com.ua&sz=128",
+  "name": "MebliKol",
+  "phone": "+380959399276",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт meblikol.com.ua открывается, карточка со статусом Active, адрес и телефон в Коломые.",
+  "website": "http://meblikol.com.ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Дрогобыч",
+  "description": "Фабрика мебели SWW в Дрогобыче: корпусные мебли под заказ по индивидуальному дизайну, с фиксированной ценой, включающей изготовление, доставку и монтаж. Оплата наличная, безналичная и банковской картой. Адрес — ул. Самборская, 128.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=sww.com.ua&sz=128",
+  "name": "SWW",
+  "phone": "+380961762124",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт sww.com.ua открывается, карточка со статусом Active, адрес и телефон в Дрогобыче.",
+  "website": "http://www.sww.com.ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Бердичев",
+  "description": "Мебельный магазин AntikMebli в Бердичеве: мебли и декор из Европы. Адрес — ул. Житомирская, 53, работает ежедневно с 9:00 до 18:00. В каталогах магазин отмечен как действующий, с актуальным телефоном и сайтом.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=antikmebli.com&sz=128",
+  "name": "AntikMebli",
+  "phone": "+380680048000",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка в поиске со статусом Active, сайт antikmebli.com, адрес и телефон в Бердичеве.",
+  "website": "https://antikmebli.com/"
+ },
+ {
+  "category": "shops",
+  "city": "Павлоград",
+  "description": "Мебельный магазин VIP Мебель в Павлограде: продажа мебели, адрес — ул. Независимости, 143. В каталогах и на картах магазин отмечен как действующий, с актуальным телефоном и страницей в Instagram.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "VIP Мебель",
+  "phone": "+380953342341",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/vipmebel_ua/"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: карточка в поиске со статусом Active, адрес и телефон в Павлограде, активная страница в Instagram.",
+  "website": "https://www.instagram.com/vipmebel_ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Измаил",
+  "description": "Мебельный магазин «Таволга» в Измаиле: продажа мебели, адрес — ул. Осипенко, 89. В каталогах и на картах магазин отмечен как действующий, с актуальным телефоном и страницей в Instagram.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Таволга",
+  "phone": "+380664575768",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://instagram.com/izmail_mebel_tavolga"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: карточка в поиске со статусом Active, адрес и телефон в Измаиле, активная страница в Instagram.",
+  "website": "https://instagram.com/izmail_mebel_tavolga"
+ },
+ {
+  "category": "shops",
+  "city": "Коломыя",
+  "description": "Мебельный магазин «Меблі Релакс» в Коломые: изготовление мебели на заказ — кухни, спальни, гостиные, шкафы-купе, детские, кровати. Работает по Ивано-Франковской области. Адрес — пр. Грушевского, 23/4.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Меблі Релакс",
+  "phone": "+380661132280",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "http://www.instagram.com/relax.mebli"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: карточка в поиске со статусом Active, адрес и телефон в Коломые, активная страница в Instagram.",
+  "website": "http://www.instagram.com/relax.mebli"
+ },
+ {
+  "category": "realestate",
+  "city": "Мукачево",
+  "description": "Агентство недвижимости Buy House (ТОВ «Агенція нерухомості Бай Хаус», основано в 2019 году): купля-продажа и аренда жилой и коммерческой недвижимости в Закарпатье, Львове и Буковеле, экспертная оценка, оформление техпаспортов БТІ, работа с программами «єОселя» и «єВідновлення». Офис в Мукачеве — ул. Духновича, 41; есть офисы в Ужгороде, Сваляве и Иршаве.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=buyhouse.com.ua&sz=128",
+  "name": "Buy House",
+  "phone": "+380952512345",
+  "socials": [
+   {
+    "label": "Telegram",
+    "url": "https://t.me/nerukhomist24_bot"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт buyhouse.com.ua проверен 2026-11-23, указаны офисы, актуальные объявления и телефон.",
+  "website": "https://buyhouse.com.ua/"
+ },
+ {
+  "category": "realestate",
+  "city": "Кременчуг",
+  "description": "Агентство недвижимости «Удача» в Кременчуге: продажа и аренда недвижимости в Кременчуге, Полтаве и Киеве, подбор риелтора для поиска жилья в Украине и за границей. На сайте — актуальные объявления об аренде и продаже и отзывы клиентов, рекомендующих агентство. Адрес — ул. Первомайская, 20а, офис 201.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=uda4a.in.ua&sz=128",
+  "name": "Удача",
+  "phone": "+380970272659",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт uda4a.in.ua проверен 2026-11-23, актуальные объявления, адрес и телефон в Кременчуге.",
+  "website": "http://uda4a.in.ua/"
+ },
+ {
+  "category": "realestate",
+  "city": "Кременчуг",
+  "description": "Агентство недвижимости Sova в Кременчуге: операции с недвижимостью по всей Украине, во главе компании — риелтор с десятилетним стажем. Агентство заявляет новые стандарты качества и клиентоориентированность. Адрес — ул. Небесной Сотни, 24/37, email — info@an-sova.com.ua.",
+  "email": "info@an-sova.com.ua",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=an-sova.com.ua&sz=128",
+  "name": "Sova",
+  "phone": "+380980941075",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт an-sova.com.ua проверен 2026-11-23, указаны адрес, телефон и email в Кременчуге.",
+  "website": "https://an-sova.com.ua/"
+ },
+ {
+  "category": "realestate",
+  "city": "Каменец-Подольский",
+  "description": "Агентство недвижимости Parasulko Realty Group в Каменце-Подольском: первичный и вторичный рынок, коммерческие и загородные объекты, обмен, оценка недвижимости, узаконение перепланировок, сопровождение сделок. Владелец — Владимир Парасулько, агентство называет себя самым успешным в городе.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=parasulkorealtygroup.just-on.site&sz=128",
+  "name": "Parasulko Realty Group",
+  "phone": "+380971925490",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: сайт агентства открывается, указаны услуги, команда и телефон владельца +380971925490.",
+  "website": "https://parasulkorealtygroup.just-on.site/"
+ },
+ {
+  "category": "realestate",
+  "city": "Каменец-Подольский",
+  "description": "Агентство недвижимости «Аліка» в Каменце-Подольском: продажа и аренда любой недвижимости, работает в городе и в радиусе 20 км более 16 лет. Заявляет десятки закрытых сделок ежемесячно и сотни довольных клиентов ежегодно, публикует отчёты об угодах за октябрь.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=sites.google.com&sz=128",
+  "name": "Аліка",
+  "phone": "+380979213807",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт проверен 2026-11-23, указаны стаж более 16 лет, свежие сделки за октябрь и телефон.",
+  "website": "https://sites.google.com/view/alika-realty-1"
+ },
+ {
+  "category": "realestate",
+  "city": "Прилуки",
+  "description": "Агентство недвижимости ORENDA PRK в Прилуках: управление недвижимостью, аренда и продажа. Адрес — ул. Ю. Коптева, 58А. В каталогах агентство отмечено как действующее, с актуальным телефоном и Telegram-каналом.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=t.me&sz=128",
+  "name": "ORENDA PRK",
+  "phone": "+380661002022",
+  "socials": [
+   {
+    "label": "Telegram",
+    "url": "https://t.me/orenda_PRK_2022"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: карточка в поиске со статусом Active, адрес и телефон в Прилуках, активный Telegram-канал.",
+  "website": "https://t.me/orenda_PRK_2022"
+ },
+ {
+  "category": "realestate",
+  "city": "Прилуки",
+  "description": "Агентство недвижимости «Вокзал» в Прилуках: купля-продажа и аренда недвижимости. Адрес — ул. Европейская, 108. В каталогах агентство отмечено как действующее, с актуальным телефоном и сайтом.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=orendavokzal.wixsite.com&sz=128",
+  "name": "Вокзал",
+  "phone": "+380934290202",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка в поиске со статусом Active, адрес и телефон в Прилуках, сайт на Wix открывается в поиске.",
+  "website": "https://orendavokzal.wixsite.com/my-site-2"
+ },
+ {
+  "category": "finance",
+  "city": "Мукачево",
+  "description": "Адвокат в Мукачево и Закарпатье, офис: ул. Мостовая, 6, офис 6. Ведёт семейные, уголовные, гражданские, автомобильные и наследственные дела, консультирует по военному праву; договор можно заключить онлайн через «Дія» или «Вчасно». На официальном сайте опубликованы разборы успешных дел и отзывы клиентов с оценкой 5/5, где хвалят понятные объяснения и оперативность.",
+  "email": "anzelikabutasadvokat@gmail.com",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=info.butash.com.ua&sz=128",
+  "name": "Адвокат Анжелика Буташ",
+  "phone": "+380770034567",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт активен, указаны адрес офиса, телефон и email; на сайте есть актуальные кейсы и отзывы.",
+  "website": "https://info.butash.com.ua"
+ },
+ {
+  "category": "finance",
+  "city": "Кременчуг",
+  "description": "Юридическая фирма в Кременчуге (ул. Шевченко, 33), по данным Liga:BOOK — старейшая специализированная фирма города в сфере правового сопровождения хозяйственной деятельности предприятий: хозяйственные споры, слияния и поглощения, обжалование действий налоговых органов. В конторе работают 5 адвокатов и 5 юрисконсультов; также ведут гражданские и уголовные дела.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=www.ubkcompos.com.ua&sz=128",
+  "name": "Адвокатское бюро Остахова (UBKcompos)",
+  "phone": "+380985448857",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: сайт и профиль в Liga:BOOK активны, в городских справочниках указаны адрес и телефон.",
+  "website": "https://www.ubkcompos.com.ua"
+ },
+ {
+  "category": "finance",
+  "city": "Кременчуг",
+  "description": "Частный нотариус в Кременчуге с 15-летним опытом нотариальной деятельности, по данным её сайта — более 26 865 совершённых нотариальных действий. Удостоверяет договоры купли-продажи, дарения, ипотеки и другие, оформляет доверенности, завещания, наследство, засвидетельствование копий и подписей. На сайте много положительных отзывов клиентов о скорости и внимательности.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=ostahova.com.ua&sz=128",
+  "name": "Частный нотариус Остахова Наталья Павловна",
+  "phone": "+380964953658",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт активен (проверен в ноябре 2026), указаны телефон и перечень услуг.",
+  "website": "http://ostahova.com.ua"
+ },
+ {
+  "category": "finance",
+  "city": "Кременчуг",
+  "description": "Таможенно-брокерская компания, работающая во всех городах Украины, с офисом в Кременчуге. Оказывает таможенное оформление импортных и экспортных грузов, аккредитацию на таможне, таможенный консалтинг, а также юридические услуги: консультации юриста и адвоката, составление договоров, досудебное урегулирование споров, представительство в судах, регистрация и ликвидация предприятий.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=alfaiomega.com.ua&sz=128",
+  "name": "Таможенно-брокерская компания «Альфа и Омега»",
+  "phone": "+380673512091",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: компания много лет на рынке, упоминается в городских справочниках Кременчуга, Никополя и Павлограда с актуальными телефонами.",
+  "website": "https://alfaiomega.com.ua"
+ },
+ {
+  "category": "finance",
+  "city": "Каменское",
+  "description": "Кредитный союз в Каменском (ул. Медицинская, 26), основан в 2000 году, работает только для жителей Днепропетровской области. Выдаёт кредиты членам союза на прозрачных условиях без скрытых комиссий, с льготными программами для ветеранов, семей погибших защитников и пенсионеров; деятельность регулируется Национальным банком Украины, членам доступна бесплатная юридическая поддержка.",
+  "email": "fortecya.dp@gmail.com",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=www.fortecya.dp.ua&sz=128",
+  "name": "Кредитный союз «Христианская крепость»",
+  "phone": "+380688684182",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт активен, указаны адрес главного офиса, телефоны и email; спілка основана в 2000 году.",
+  "website": "https://www.fortecya.dp.ua"
+ },
+ {
+  "category": "finance",
+  "city": "Виноградов",
+  "description": "Адвокат в Виноградове (Закарпатская область), ул. Борканюка, 37. Принимает в будние дни с 9:00 до 17:00, ведёт приём по юридическим вопросам для жителей города и района. В справочниках указан как действующая адвокатская практика с собственным сайтом nechaev.in.ua.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=nechaev.in.ua&sz=128",
+  "name": "Адвокат Валерий Нечаев",
+  "phone": "+380501862334",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующий: в справочниках статус Active, указаны адрес, телефон и сайт; прямая загрузка сайта не удалась, телефон подтверждён справочником.",
+  "website": "http://nechaev.in.ua"
+ },
+ {
+  "category": "finance",
+  "city": "Ужгород",
+  "description": "Небольшая юридическая компания в Ужгороде (пл. Почтовая, 4, офис 101), опыт работы — более 15 лет. Полный юридический сопровід сделок с недвижимостью, включая проверку застройщика и договоров новостроек, банковское право и помощь по проблемным кредитам, семейное право, составление заявлений и жалоб, защита прав потребителей. Консультации онлайн и офлайн.",
+  "email": "mvcreditlawyer@gmail.com",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=sites.google.com&sz=128",
+  "name": "Юридическая компания «По закону ЛТД»",
+  "phone": "+380969700238",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: страница компании активна, указаны адрес офиса в Ужгороде, телефон и email.",
+  "website": "https://sites.google.com/view/llc-by-law-ltd/%D0%B3%D0%BB%D0%BE%D0%B2%D0%BD%D0%B0-%D1%81%D1%82%D0%BE%D1%80%D1%96%D0%BD%D0%BA%D0%B0"
+ },
+ {
+  "category": "finance",
+  "city": "Ивано-Франковск",
+  "description": "Небольшая юридическая фирма в Ивано-Франковске (ул. Чорновила, 7, офис 104). Устные консультации юриста в офисе или онлайн — от 1000 грн, письменные — от 1600 грн. Помогают в семейных спорах, трудовых отношениях, вопросах образования, медиации и других правовых вопросах.",
+  "email": "jlawyers.ua@gmail.com",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=justlawyers.org.ua&sz=128",
+  "name": "JustLawyers",
+  "phone": "+380979615630",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт активен, указаны адрес, телефон и email.",
+  "website": "https://justlawyers.org.ua"
+ },
+ {
+  "category": "finance",
+  "city": "Львов",
+  "description": "Консалтинговая компания во Львове (ул. Шевченко, 31Б): бухгалтерский аутсорсинг, налоговое сопровождение, кадровый аутсорсинг, юридический аутсорсинг, охрана труда и военный учёт. В команде — сертифицированные бухгалтеры, налоговые консультанты, юристы и кадровики; работают по договору с фиксированной ежемесячной оплатой.",
+  "email": "nataliia.hutsul@kpg-consult.com.ua",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=kpg-consult.com.ua&sz=128",
+  "name": "КПГ Консалт",
+  "phone": "+380983098483",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт активен, указаны адрес во Львове, телефоны и email директора.",
+  "website": "https://kpg-consult.com.ua"
+ },
+ {
+  "category": "finance",
+  "city": "Хуст",
+  "description": "Юридическая фирма в Хусте (Закарпатская область) с офисом в городе. В ноябре 2026 года фирма открыто набирала адвоката в команду на полную занятость — признак активной работы и роста. Адвокаты ведут дела клиентов самостоятельно, от разбора ситуации до защиты интересов.",
+  "email": "",
+  "logoUrl": "",
+  "name": "Юридическая фирма DOVEDENO",
+  "phone": "+380965504090",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: в ноябре 2026 фирма разместила вакансию адвоката в Хусте на Work.ua с телефоном; собственного сайта в поиске не найдено.",
+  "website": ""
+ },
+ {
+  "category": "finance",
+  "city": "Измаил",
+  "description": "Юридическая фирма в Измаиле (просп. Суворова, 37). Оказывает юридические услуги жителям города и района. В городских справочниках фирма указана как действующая, с адресом и телефоном для связи.",
+  "email": "",
+  "logoUrl": "",
+  "name": "Юридическая фирма «Кейс»",
+  "phone": "+380484121712",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: указана в актуальном городском справочнике Измаила с адресом и телефоном; собственный сайт в поиске не найден.",
+  "website": ""
+ },
+ {
+  "category": "finance",
+  "city": "Умань",
+  "description": "Адвокат в Умани, офис: ул. Коломенская, 3А, офис 207. Принимает в будние дни с 9:00 до 18:00, ведёт юридические консультации и дела клиентов. В справочниках указана как действующая адвокатская практика с телефоном и страницей в Instagram.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Адвокат Юлия Давидяк",
+  "phone": "+380631155161",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/advokat.davydiak/"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: в справочниках статус Active, указаны адрес офиса, телефон и страница в Instagram; собственного сайта нет.",
+  "website": "https://www.instagram.com/advokat.davydiak/"
+ },
+ {
+  "category": "finance",
+  "city": "Павлоград",
+  "description": "Юридическая фирма в Павлограде (ул. Ленина, 103). Оказывает юридические услуги жителям города и района. В городских справочниках фирма указана как действующая, с адресом и телефоном для связи.",
+  "email": "",
+  "logoUrl": "",
+  "name": "Юридическая фирма «Правекс»",
+  "phone": "+380563262607",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: указана в актуальном городском справочнике Павлограда с адресом и телефоном; собственный сайт в поиске не найден.",
+  "website": ""
+ },
+ {
+  "category": "finance",
+  "city": "Киев",
+  "description": "Украинское инвестиционное агентство в Киеве (ул. Рейтарская, 6). Помогает инвесторам сформировать прибыльный портфель, проводит независимый анализ и аудит отчётности по инвестициям, оказывает юридическое сопровождение и защиту инвестиций, помогает бизнесу и стартапам найти финансирование. На сайте заявлены проекты с входом от 1000–10000 долларов/евро.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=investua.agency&sz=128",
+  "name": "Инвестиционное агентство Invest UA",
+  "phone": "+380442094022",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт активен, указаны адрес, телефоны и команда; лицензия НКЦПФР в открытых источниках отдельно не проверялась.",
+  "website": "https://investua.agency"
+ },
+ {
+  "category": "finance",
+  "city": "Киев",
+  "description": "Компания в Киеве: аутсорсинг бухгалтерии и юридическое сопровождение предпринимателей, на рынке более 12 лет, в портфеле — 800 компаний-клиентов по всей Украине. Ведёт бухгалтерию ФОП и ТОВ, восстанавливает учёт, подаёт отчётность, помогает с регистрацией ФОП/ТОВ, кадровым и военным учётом, проверяет кабинет плательщика налогов.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=bip.net.ua&sz=128",
+  "name": "Бухгалтерско-юридическая компания БИП (BIP)",
+  "phone": "+380504682087",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт активен, указаны телефоны и описание услуг; компания заявляет 12+ лет работы и 800 клиентов.",
+  "website": "https://bip.net.ua"
+ },
+ {
+  "category": "travel",
+  "city": "Кременчуг",
+  "description": "Турагентство из Кременчуга, работает 18 лет, офис на ул. Соборной, 31. Подбирает туры по всему миру, оформляет авиабилеты, страховки и трансферы в аэропорт, сопровождает туристов на связи 24/7. Предоплата 25–30%, остальное — за 15 дней до тура. В отзывах в Google (4,5 из 5, 43 отзыва) клиенты хвалят подбор туров и сервис менеджеров.",
+  "email": "ktm-tour@ukr.net",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=madagaskar.in.ua&sz=128",
+  "name": "Турагентство «Мадагаскар»",
+  "phone": "+380676217444",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/madagaskar_agency/"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт открыт и актуален (проверен 23.11.2026), указаны адрес офиса, телефон и график работы, на сайте — свежие отзывы клиентов.",
+  "website": "https://madagaskar.in.ua/"
+ },
+ {
+  "category": "travel",
+  "city": "Мукачево",
+  "description": "Туристическое агентство из Мукачево (ул. Мира, 46/7). Предлагает туры более чем в 20 стран: пляжный отдых, автобусные туры по Европе, отели 4–5 звёзд, оформление виз и страховых полисов, трансферы и бронирование билетов. Обещает честную цену без скрытых платежей и поддержку 24/7. Клиенты в описании агентства отмечают выгодные цены и помощь с документами.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=freeway.com.ua&sz=128",
+  "name": "Free Way Mukachevo",
+  "phone": "+380662495900",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт доступен (краул 03.11.2026), агентство указано как активное, с адресом и телефоном в Мукачево.",
+  "website": "https://freeway.com.ua/"
+ },
+ {
+  "category": "travel",
+  "city": "Мукачево",
+  "description": "Турагентство из Мукачево (ул. Мира, 11а). Организует туры и экскурсии, работает ежедневно, кроме воскресенья. Небольшое локальное агентство Закарпатья для отдыха в Украине и за рубежом. В карточке компании указан действующий телефон и сайт meridiantravel.com.ua.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=meridiantravel.com.ua&sz=128",
+  "name": "Турагентство Meridian",
+  "phone": "+380669791616",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске помечена как активная, с адресом, телефоном и сайтом в Мукачево.",
+  "website": "http://www.meridiantravel.com.ua/"
+ },
+ {
+  "category": "travel",
+  "city": "Каменец-Подольский",
+  "description": "Туристическое агентство из Каменца-Подольского (ул. Шевченко, 9/4). Подбирает туры и экскурсии, в том числе по Подолью и за рубеж, работает по будням. Небольшое локальное агентство с собственным сайтом-каталогом туров. В карточке компании указаны действующие адрес, телефон и сайт.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=mangokp.xotravel.pro&sz=128",
+  "name": "Mango-Travel",
+  "phone": "+380972260506",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске помечена как активная, с адресом, телефоном и сайтом в Каменце-Подольском.",
+  "website": "https://mangokp.xotravel.pro/uk/tours/"
+ },
+ {
+  "category": "travel",
+  "city": "Моршин",
+  "description": "Санаторий в Моршине (Парковая площадь, 3) — отдых и оздоровление среди природы Прикарпатья с минеральной водой. Предлагает путёвки, например 7 дней от 10 150 грн за одного, бронирование по телефону и email. На сайте — актуальные акции осени 2026 года. Гости в отзывах отмечают спокойный отдых и лечебную воду.",
+  "email": "morshynkurort@ukr.net",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=morshynkurort.net&sz=128",
+  "name": "Санаторий «Моршинкурорт»",
+  "phone": "+380673435500",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующий: сайт обновлялся 09.10.2026, указаны актуальные цены и телефоны бронирования, адрес в Моршине.",
+  "website": "https://morshynkurort.net/"
+ },
+ {
+  "category": "travel",
+  "city": "Моршин",
+  "description": "Государственный санаторий в центре Моршина, открыт в 1982 году: 200 номеров в 4 корпусах, напротив бювета с минеральными водами. Лечение заболеваний ЖКТ, проживание, трёхразовое диетическое питание, путёвки от 2 070 грн в сутки. На агрегаторах указаны цены на путёвки 2026–2027 годов. Отзывы называют его одним из самых популярных санаториев курорта за доступные цены.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=morshinskyi.com.ua&sz=128",
+  "name": "Санаторий «Моршинский»",
+  "phone": "",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующий: официальный сайт указан в каталогах, цены на путёвки обновлены осенью 2026 года, санаторий принимает гостей.",
+  "website": "https://www.morshinskyi.com.ua/"
+ },
+ {
+  "category": "travel",
+  "city": "Трускавец",
+  "description": "Уютный отель в центре Трускавца (ул. Тараса Шевченко, 30). Небольшой городской отель для отдыха на бальнеологическом курорте рядом с бюветом и парком. В карточке отеля указаны действующие телефон и официальный сайт с онлайн-бронированием. Гости отмечают удобное центральное расположение.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=jam-hotel.com.ua&sz=128",
+  "name": "Jam Hotel",
+  "phone": "+380673893565",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующий: карточка отеля в поиске помечена как активная, с адресом, телефоном и сайтом в Трускавце.",
+  "website": "http://www.jam-hotel.com.ua/"
+ },
+ {
+  "category": "travel",
+  "city": "Трускавец",
+  "description": "Отель в Трускавце (ул. Померецкая, 35а), также работает как база отдыха. Расположен в курортной зоне города, предлагает проживание для отдыха и лечения на минеральных водах. В карточке отеля указаны действующие телефон и официальный сайт. В сети встречаются смешанные отзывы гостей, стоит читать свежие комментарии перед бронированием.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=bogema.com.ua&sz=128",
+  "name": "Отель «Богема»",
+  "phone": "+380680434242",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующий: карточка отеля в поиске помечена как активная, с адресом, телефоном и сайтом в Трускавце.",
+  "website": "http://www.bogema.com.ua/"
+ },
+ {
+  "category": "travel",
+  "city": "Бердичев",
+  "description": "Визовый центр в Бердичеве (пл. Соборная, 6а), сайт 4viza.com. Помогает с оформлением виз и документов для поездок за границу, работает пн–сб с 09:00 до 18:00. Локальный визовый сервис для жителей Житомирской области. В справочниках города указан как действующая компания с телефоном.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=4viza.com&sz=128",
+  "name": "EuroАльянс",
+  "phone": "+380673359010",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: компания присутствует в актуальных справочниках Бердичева (обновлено 5 дней назад), с адресом, телефоном, сайтом и графиком работы.",
+  "website": "http://www.4viza.com"
+ },
+ {
+  "category": "travel",
+  "city": "Измаил",
+  "description": "Турфирма из Измаила (ул. Кутузова, 62), организует автобусные туры из Измаила в Румынию, Болгарию, Грецию, Турцию и Венгрию, а также экскурсии по Бессарабии (Вилково, Умань, Софиевка). На сайте — туры с датами ноября–декабря 2026 года, например в Трансильванию и Будапешт. Клиенты отмечают авторские маршруты из небольшого придунайского города.",
+  "email": "besarabtour@ukr.net",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=besarabtour.com.ua&sz=128",
+  "name": "«Бессарабия Тур»",
+  "phone": "+380672527462",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт открыт (краул 15.11.2026), на главной — туры с датами ноября–декабря 2026 года, адрес, телефоны и email в Измаиле.",
+  "website": "https://www.besarabtour.com.ua/"
+ },
+ {
+  "category": "travel",
+  "city": "Сходница",
+  "description": "Пятизвёздочный СПА-готель в Сходнице (ул. Богдана Хмельницкого, 28): 27 номеров, ресторан, крытый и открытый бассейны, СПА- и медицинский центр, собственный бювет с минеральными водами источников № 2С, 5, 6, 13 и 357. Работает круглый год, предлагает семейный отдых, ретриты и программы восстановления. Гости отмечают высокий уровень сервиса и лечение минеральной водой.",
+  "email": "info@respecthotel.com.ua",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=respecthotel.com.ua&sz=128",
+  "name": "СПА-готель «Респект Карпати»",
+  "phone": "+380674405755",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующий: официальный сайт доступен, указаны актуальные спецпредложения осени 2026 года, телефоны, email и адрес в Сходнице.",
+  "website": "https://www.respecthotel.com.ua/"
+ },
+ {
+  "category": "travel",
+  "city": "Яремче",
+  "description": "Клуб-отель в Яремче (ул. И. Петраша, 6) с рестораном и бассейном. Номера и интерьер выполнены в гуцульском стиле с современными технологиями, для отдыха в Карпатах летом и зимой. В карточке отеля указаны действующие телефон и официальный сайт. Гости в отзывах ставят отелю 4,7 из 5 и хвалят атмосферу и расположение.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=yaremche-club-hotel.com&sz=128",
+  "name": "Yaremche Club Hotel",
+  "phone": "+380981689000",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующий: карточка отеля в поиске помечена как активная и открытая, с адресом, телефоном и сайтом в Яремче.",
+  "website": "http://www.yaremche-club-hotel.com/"
+ },
+ {
+  "category": "travel",
+  "city": "Яремче",
+  "description": "Отель Rich Oak в Карпатах у Яремче с панорамным бассейном, горной атмосферой и видами на горы. Подходит для спокойного отдыха, ретритов и поездок с детьми. В карточке отеля указаны действующие телефон и официальный сайт richoak.net. Гости отмечают виды и горную атмосферу отеля.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=richoak.net&sz=128",
+  "name": "Отель Rich Oak",
+  "phone": "+380670068855",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующий: карточка отеля в поиске помечена как активная и открытая, с адресом, телефоном и сайтом.",
+  "website": "https://richoak.net/"
+ },
+ {
+  "category": "travel",
+  "city": "Ковель",
+  "description": "Туристическое агентство из Ковеля (бульвар Леси Украинки, 18, ТД «Бульвар»). Помогает подобрать туры и воплотить мечты об отдыхе: пляжные, экскурсионные и автобусные направления. Работает с 2009 года в регионе, по будням до 19:00, в субботу до 16:00. В отзывах — 4,9 из 5 (18 отзывов), клиенты хвалят подбор туров.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=atlanttour.com.ua&sz=128",
+  "name": "Турагентство Atlant Tour",
+  "phone": "+380936918528",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка агентства в поиске помечена как активная, с адресом, телефоном, сайтом и рейтингом 4,9 из 5 в Ковеле.",
+  "website": "https://atlanttour.com.ua/"
+ },
+ {
+  "category": "travel",
+  "city": "Ковель",
+  "description": "Туристическое агентство из Ковеля (ул. Театральная, 18), работает с 2009 года. Подбирает туры для отдыха по опыту многолетней работы, обещает удовлетворить пожелания клиентов по направлению и бюджету. Небольшое локальное агентство Волыни. В карточке компании указаны действующие адрес, телефон и сайт.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=maytour.in.ua&sz=128",
+  "name": "Турагентство «МайТур»",
+  "phone": "+380508666352",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка агентства в поиске помечена как активная, с адресом, телефоном и сайтом в Ковеле; работает с 2009 года.",
+  "website": "https://www.maytour.in.ua/"
+ },
+ {
+  "category": "travel",
+  "city": "Светловодск",
+  "description": "Туркомпания из Светловодска, организует автобусные туры выходного дня и экскурсии по Украине из Светловодска, Кременчуга, Александрии, Полтавы и Кропивницкого, а также пляжный отдых (Турция, Египет, Болгария, Греция и др.) и перевозки в 17 стран Европы. Более 500 туров по Украине для школьников, студентов и корпоративных групп. На сайте указаны актуальные телефоны и email.",
+  "email": "mamonvita@gmail.com",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=busbustour.com.ua&sz=128",
+  "name": "BusBusTour",
+  "phone": "+380677586169",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт доступен (краул 36 дней назад), указаны телефоны, email и выезды из Светловодска и соседних городов.",
+  "website": "https://busbustour.com.ua/"
+ },
+ {
+  "category": "travel",
+  "city": "Буковель",
+  "description": "Отель и спа в Буковеле (участок Вишни, 309) — «Буквіль». Горный отель для отдыха в Карпатах зимой и летом, рядом с подъёмниками курорта. В карточке отеля указаны действующие телефон и официальный сайт bukville.com.ua. Гости отмечают расположение в самом Буковеле.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=bukville.com.ua&sz=128",
+  "name": "Отель Bukville Hotel & Spa",
+  "phone": "+380965872030",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующий: карточка отеля в поиске помечена как активная и открытая, с адресом, телефоном и сайтом в Буковеле.",
+  "website": "http://www.bukville.com.ua/"
+ },
+ {
+  "category": "travel",
+  "city": "Миргород",
+  "description": "Санаторно-курортный комплекс в Миргороде (ул. Гоголя, 112), объединяет санатории «Берёзовый гай», «Полтава», «Хорол» и «Миргород». Бальнеогрязевой курорт на минеральной воде и торфяной грязи: лечение ЖКТ, печени, опорно-двигательного аппарата, реабилитация. Путёвки от 1 100 грн в сутки. На сайте — скидки и спецпредложения с 16 ноября 2026 года. Отзывы называют его главным курортом Миргорода.",
+  "email": "marketing@mirgorodkurort.ua",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=mirgorodkurort.ua&sz=128",
+  "name": "«Миргородкурорт»",
+  "phone": "+380504058007",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующий: официальный сайт обновлялся 3 дня назад, на сайте — акции с 16 ноября 2026 года, телефоны и email отдела бронирования.",
+  "website": "https://mirgorodkurort.ua/"
+ },
+ {
+  "category": "auto",
+  "city": "Белая Церковь",
+  "description": "Сервис автоподбора и проверки авто перед покупкой в Белой Церкви: выездная проверка, диагностика, помощь в выборе автомобиля с пробегом. Работает по адресу ул. Александрийская, 92, пн–пт 9:00–18:00. В сети компания представлена как действующая СТО и сервис автоподбора с актуальными контактами.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "ASP.BC (AvtoSpecPartner)",
+  "phone": "+380990067175",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/sto_asp.bc"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске со статусом Active, указан актуальный телефон и график работы.",
+  "website": "https://www.instagram.com/sto_asp.bc"
+ },
+ {
+  "category": "auto",
+  "city": "Стрый",
+  "description": "Автосервис (СТО) в Стрые на ул. Клима Савуры, 2б: ремонт и обслуживание автомобилей, работает пн–пт 9:00–21:00, сб 9:00–19:00. В сети компания представлена как действующая СТО с актуальным телефоном и видеоконтентом о работе сервиса.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=tiktok.com&sz=128",
+  "name": "V12 Service",
+  "phone": "+380508280859",
+  "socials": [
+   {
+    "label": "TikTok",
+    "url": "https://www.tiktok.com/@v.12.service.stry"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске со статусом Active, указан телефон и график работы.",
+  "website": "https://www.tiktok.com/@v.12.service.stry"
+ },
+ {
+  "category": "auto",
+  "city": "Каменец-Подольский",
+  "description": "Автопрокат в Каменце-Подольском: аренда автомобилей, работает ежедневно 6:00–21:00, адрес ул. Вторая Полевая, 2. В сети компания представлена как действующий прокат авто с актуальным телефоном.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Auto Go",
+  "phone": "+380673814788",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/autogo_kp"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске со статусом Active, указан телефон и график работы.",
+  "website": "https://www.instagram.com/autogo_kp"
+ },
+ {
+  "category": "auto",
+  "city": "Бердичев",
+  "description": "Автомайданчик в Бердичеве на ул. Шкиряников, 8: продажа авто с пробегом (более 100 авто в наличии), подбор и пригон авто из Европы, США и Кореи под заказ, кредит, лизинг, trade-in, СТО, детейлинг и проверка авто. На рынке с 2011 года, работает ежедневно 9:00–19:30. В отзывах на сайте и в Google клиенты хвалят выбор авто и помощь менеджеров в подборе.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=brauto.ua&sz=128",
+  "name": "BRAUTO",
+  "phone": "+380683205757",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт brauto.ua открыт и актуален (каталог авто с ценами, отзывы 2026 года), телефон подтверждён сайтом.",
+  "website": "https://brauto.ua/"
+ },
+ {
+  "category": "auto",
+  "city": "Смела",
+  "description": "Автосалон в Смеле на ул. Тараса Шевченко, 81: продажа авто с пробегом, автовикуп, trade-in, кредит и лизинг, помощь в подборе авто, СТО, детейлинг и химчистка салона. Авто перед продажей проходят проверку. Работает пн–сб 8:00–18:00. В сети компания активно публикует объявления о продаже авто с актуальными ценами и контактами.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=avtoritet-smila.com.ua&sz=128",
+  "name": "Авторитет Сміла",
+  "phone": "+380739300300",
+  "socials": [
+   {
+    "label": "Telegram",
+    "url": "https://t.me/autoritetsmila"
+   },
+   {
+    "label": "TikTok",
+    "url": "https://www.tiktok.com/@autoritet.smila"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт avtoritet-smila.com.ua открыт, каталог авто и телефон подтверждены сайтом.",
+  "website": "https://avtoritet-smila.com.ua/"
+ },
+ {
+  "category": "auto",
+  "city": "Кременчуг",
+  "description": "Автопрокат в Кременчуге на ул. Лекаря О. Богаевского, 10/30: аренда автомобилей. В сети компания представлена как действующий прокат авто с актуальным телефоном и сайтом.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=dacar24.com.ua&sz=128",
+  "name": "DaCar",
+  "phone": "+380504071515",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске со статусом Active, указан телефон и сайт.",
+  "website": "http://www.dacar24.com.ua/"
+ },
+ {
+  "category": "auto",
+  "city": "Вознесенск",
+  "description": "Круглосуточный шиномонтаж в Вознесенске: легковой, грузовой шиномонтаж и шиномонтаж спецтехники, продажа шин (Nokian), работа на профессиональном оборудовании Trommelberg, Hofmann, Hunter. Возможен договор на обслуживание колёс по безналичному расчёту. В каталогах компания описана как действующая шиномонтажная мастерская с опытом работы с колёсами всех марок.",
+  "email": "",
+  "logoUrl": "",
+  "name": "Триумф-Ф",
+  "phone": "+380972606486",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: компания присутствует в актуальных бизнес-каталогах с телефоном и описанием круглосуточной работы; собственного сайта не найдено.",
+  "website": ""
+ },
+ {
+  "category": "auto",
+  "city": "Измаил",
+  "description": "Прокат автомобилей в Измаиле на ул. Клушина, 11: аренда авто. В сети компания представлена как действующий автопрокат с актуальным телефоном и страницей в Instagram.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Global Car Rental",
+  "phone": "+380984580188",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://instagram.com/global.prokat_izmail"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске со статусом Active, указан телефон.",
+  "website": "https://instagram.com/global.prokat_izmail"
+ },
+ {
+  "category": "auto",
+  "city": "Ковель",
+  "description": "Автошкола в Ковеле на ул. Независимости, 84: обучение водителей категорий с теорией онлайн и офлайн, практическое вождение на авто с механикой и автоматом, подготовка к экзаменам в ТСЦ МВД. Аккредитованный заклад — Ковельский филиал ПП «Автошкола Форсаж» упоминается в приказах регионального сервисного центра МВД. На сайте школа заявляет сотни подготовленных выпускников.",
+  "email": "forsagkovel@gmail.com",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=forsazh.com.ua&sz=128",
+  "name": "Автошкола Форсаж Ковель",
+  "phone": "+380996278889",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт forsazh.com.ua открыт, адрес, телефоны и email подтверждены сайтом; филиал аккредитован по данным РСЦ МВД.",
+  "website": "https://forsazh.com.ua/"
+ },
+ {
+  "category": "auto",
+  "city": "Ковель",
+  "description": "Автошкола в Ковеле: обучение вождению, в том числе на автомобилях с автоматической коробкой передач. В сети школа активно ведёт TikTok с актуальными видео о занятиях и указанием телефонов для записи.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=tiktok.com&sz=128",
+  "name": "Автошкола Jaguar",
+  "phone": "+380677773749",
+  "socials": [
+   {
+    "label": "TikTok",
+    "url": "https://www.tiktok.com/@avtoshkola_jaguar_kovel"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: актуальные видео школы в TikTok (2026 год) с телефонами для записи.",
+  "website": "https://www.tiktok.com/@avtoshkola_jaguar_kovel"
+ },
+ {
+  "category": "auto",
+  "city": "Звягель",
+  "description": "Автосервис (СТО) в Звягеле на ул. Герцена, 18: ремонт и обслуживание автомобилей, работает пн–пт 9:00–17:00. В сети компания представлена как действующая СТО с актуальным телефоном.",
+  "email": "",
+  "logoUrl": "",
+  "name": "СТО Auto Prime",
+  "phone": "+380963614469",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске со статусом Active, указан телефон и график работы; собственного сайта не найдено.",
+  "website": ""
+ },
+ {
+  "category": "auto",
+  "city": "Звягель",
+  "description": "Автосервис (СТО) в Звягеле на ул. Чехова, 9: ремонт и обслуживание автомобилей, работает пн–пт 10:00–19:00. В сети компания представлена как действующая СТО с актуальным телефоном.",
+  "email": "",
+  "logoUrl": "",
+  "name": "СТО Drive Service",
+  "phone": "+380634066594",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске со статусом Active, указан телефон и график работы; собственного сайта не найдено.",
+  "website": ""
+ },
+ {
+  "category": "auto",
+  "city": "Первомайск",
+  "description": "Автосервис (СТО) в Первомайске: ремонт и обслуживание автомобилей, работает пн–сб 9:00–19:00. В актуальном городском справочнике компания указана как действующая СТО с телефоном.",
+  "email": "",
+  "logoUrl": "",
+  "name": "СТО Бам",
+  "phone": "+380661815303",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: присутствует в актуальном справочнике Первомайска с телефоном и графиком работы; собственного сайта не найдено.",
+  "website": ""
+ },
+ {
+  "category": "auto",
+  "city": "Костополь",
+  "description": "Пункт обязательного технического контроля (техосмотр) в Костополе на ул. Буровая, 17: техосмотр легковых, грузовых авто, автобусов и прицепов, сертификация, ГБО, страхование. Сеть ОТК-Сервис — аккредитованные испытательные лаборатории по стандарту ISO 17025, техосмотр занимает около часа по предварительной записи. Работает пн–пт 9:00–18:00, сб 9:00–15:00.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=otk.in.ua&sz=128",
+  "name": "ОТК-Сервис",
+  "phone": "+380670057948",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: официальный сайт otk.in.ua открыт и актуален, карточка костопольской лаборатории в поиске со статусом Active и телефоном.",
+  "website": "https://otk.in.ua/"
+ },
+ {
+  "category": "auto",
+  "city": "Нежин",
+  "description": "Автошкола в Нежине на ул. Шевченко, 113: обучение водителей, теория и практика, работает вт–пт 10:00–17:00, сб 10:00–15:00. В сети школа представлена как действующая, с актуальным телефоном и описанием «больше, чем автошкола».",
+  "email": "",
+  "logoUrl": "",
+  "name": "Автостарт",
+  "phone": "+380977725255",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске со статусом Active, указан телефон и график работы; собственного сайта не найдено.",
+  "website": ""
+ },
+ {
+  "category": "auto",
+  "city": "Звягель",
+  "description": "Срочный автовыкуп в Звягеле на ул. Возрождения, 8: выкуп автомобилей, автоломбард. В сети компания представлена как действующая, с актуальным телефоном и видеообъявлениями о выкупе авто.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=tiktok.com&sz=128",
+  "name": "Danylyshyn Auto",
+  "phone": "+380931618711",
+  "socials": [
+   {
+    "label": "TikTok",
+    "url": "https://www.tiktok.com/@danylyshyn_auto"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: карточка компании в поиске со статусом Active, указан телефон.",
+  "website": "https://www.tiktok.com/@danylyshyn_auto"
+ },
+ {
+  "category": "education",
+  "city": "Белая Церковь",
+  "description": "Школа английского языка Magic English в Белой Церкви: индивидуальные онлайн-занятия для детей 6–17 лет по материалам Cambridge и Oxford, подготовка к ЗНО, уроки по 40–50 минут. На официальном сайте указаны адреса в Белой Церкви, Володарке и Виннице. В открытых каталогах и на картах школа указана как действующая, с актуальными контактами.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=magic-english-school.com&sz=128",
+  "name": "Magic English",
+  "phone": "+380634219976",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт и актуален (проверен 2026-11-23), указаны адреса и телефоны; в поиске школа отмечена как действующая.",
+  "website": "https://magic-english-school.com/"
+ },
+ {
+  "category": "education",
+  "city": "Мукачево",
+  "description": "Автошкола «АвтоАс» в Мукачево: подготовка водителей категории B, теория в классе и онлайн, практика на механике и автомате, сопровождение на экзамене в сервисном центре МВС, уроки первой домедицинской помощи. Сайт обещает обучение без взяток и сопровождение до получения прав. В каталогах и на картах автошкола отмечена как действующая.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=avtoas.com.ua&sz=128",
+  "name": "АвтоАс",
+  "phone": "+380664440555",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт и актуален (проверен 2026-11-23), телефон +380664440555 подтверждён сайтом и поиском.",
+  "website": "https://avtoas.com.ua/"
+ },
+ {
+  "category": "education",
+  "city": "Мукачево",
+  "description": "Автошкола MyDrive в Мукачево: обучение вождению, теоретический и практический курсы для будущих водителей. Работает ежедневно, кроме воскресенья, по данным карт и каталогов. В открытых источниках автошкола указана как действующая, с актуальным телефоном и сайтом.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=mydrive.in.ua&sz=128",
+  "name": "MyDrive",
+  "phone": "+380661110777",
+  "socials": [],
+  "status": "active",
+  "statusNote": "В поиске отмечена как действующая, с адресом в Мукачево, телефоном и сайтом mydrive.in.ua.",
+  "website": "https://mydrive.in.ua/"
+ },
+ {
+  "category": "education",
+  "city": "Дрогобыч",
+  "description": "Агентство иностранных языков Everest в Дрогобыче: курсы английского для детей и взрослых, подготовка к международным экзаменам, разговорная практика. По данным сайта, преподаватели имеют профильное образование, занятия проходят в классах и по Skype. В каталогах дрогобычский филиал отмечен как действующий.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=everest-english.com&sz=128",
+  "name": "Everest",
+  "phone": "+380960361937",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт (проверен 2026-11-23); телефон дрогобычского филиала +380960361937 подтверждён поиском и картами.",
+  "website": "https://www.everest-english.com/"
+ },
+ {
+  "category": "education",
+  "city": "Стрый",
+  "description": "Студия английского языка SKY в Стрые (есть филиал в Борислове и онлайн-формат): английский для детей и взрослых, индивидуальные, парные и групповые занятия, подготовка к НМТ, общая, бизнес-английский и английский для IT. Основатель заявляет о 10+ годах опыта и 1250+ учениках. На сайте указаны актуальные адреса и тарифы.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=english-studio-sky.fun&sz=128",
+  "name": "SKY English Studio",
+  "phone": "+380989223185",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт и актуален (проверен 2026-11-23), указаны адреса в Стрые, телефон и цены.",
+  "website": "http://www.english-studio-sky.fun/"
+ },
+ {
+  "category": "education",
+  "city": "Ковель",
+  "description": "Центр иностранных языков EuroFuture в Ковеле: курсы иностранных языков для детей и взрослых. Работает по будням с 8:00 до 19:30 по данным каталогов. В открытых источниках центр указан как действующий, с актуальным телефоном и сайтом.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=eurofuture.com.ua&sz=128",
+  "name": "EuroFuture",
+  "phone": "+380960834050",
+  "socials": [],
+  "status": "active",
+  "statusNote": "В поиске отмечен как действующий, с адресом в Ковеле, телефоном и сайтом eurofuture.com.ua.",
+  "website": "http://eurofuture.com.ua/"
+ },
+ {
+  "category": "education",
+  "city": "Кременчуг",
+  "description": "Автошкола на Подолі в Кременчуге: обучение водителей, теоретический и практический курсы, подготовка к экзамену на права. Работает по будням с 9:00 до 18:00 по данным каталогов. В открытых источниках автошкола указана как действующая, с актуальным телефоном и сайтом.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=avtopodol.pl.ua&sz=128",
+  "name": "Автошкола на Подолі",
+  "phone": "+380970292228",
+  "socials": [],
+  "status": "active",
+  "statusNote": "В поиске отмечена как действующая, с адресом в Кременчуге, телефоном и сайтом avtopodol.pl.ua.",
+  "website": "http://avtopodol.pl.ua/"
+ },
+ {
+  "category": "education",
+  "city": "Нежин",
+  "description": "Школа программирования «Академія Коду (Піксель)» в Нежине: IT-курсы для детей и подростков, обучение программированию. Работает ежедневно с 9:00 до 20:00 по данным каталогов. В открытых источниках школа указана как действующая, с актуальным телефоном и сайтом.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=codeacademy.com.ua&sz=128",
+  "name": "Академія Коду (Піксель)",
+  "phone": "+380979767581",
+  "socials": [],
+  "status": "active",
+  "statusNote": "В поиске отмечена как действующая, с адресом в Нежине, телефоном и сайтом codeacademy.com.ua.",
+  "website": "https://codeacademy.com.ua/"
+ },
+ {
+  "category": "education",
+  "city": "Вознесенск",
+  "description": "Автошкола «Антарес» в Вознесенске: обучение водителей, теоретический и практический курсы. Работает со вторника по субботу по данным каталогов. В открытых источниках автошкола указана как действующая, с актуальным телефоном и сайтом.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=voznesensk.autodriver.mk.ua&sz=128",
+  "name": "Автошкола Антарес Вознесенск",
+  "phone": "+380964354664",
+  "socials": [],
+  "status": "active",
+  "statusNote": "В поиске отмечена как действующая, с адресом в Вознесенске, телефоном и сайтом voznesensk.autodriver.mk.ua.",
+  "website": "https://voznesensk.autodriver.mk.ua/"
+ },
+ {
+  "category": "education",
+  "city": "Ромны",
+  "description": "Роменский спортивно-технический клуб ТСОУ в Ромнах: автошкола, подготовка водителей категории B. Теория — 4 недели, практика — 6 недель, возможен онлайн-формат теории. Контакты и адрес указаны на официальном сайте клуба. В открытых источниках клуб указан как действующий.",
+  "email": "stk-tsou8@ukr.net",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=sites.google.com&sz=128",
+  "name": "Роменський спортивно-технічний клуб ТСОУ",
+  "phone": "+380989933870",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт клуба найден в поиске, указаны адрес в Ромнах, телефоны и email; в каталогах отмечен как действующий.",
+  "website": "https://sites.google.com/view/avtoshkola-romny"
+ },
+ {
+  "category": "education",
+  "city": "Васильков",
+  "description": "Школа английского языка Wave of English в Василькове: курсы для детей, подростков и взрослых, занятия онлайн в Zoom и офлайн в Василькове. Групповые занятия для подростков — 2 раза в неделю, 370 грн за урок, оплата помесячно. На сайте есть отзывы учеников и благодарности родителей.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=waveofenglish.com.ua&sz=128",
+  "name": "Wave of English",
+  "phone": "+380934428099",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт найден в поиске с актуальными страницами курсов; в поиске школа отмечена как действующая, с адресом в Василькове и телефоном.",
+  "website": "https://www.waveofenglish.com.ua/"
+ },
+ {
+  "category": "education",
+  "city": "Умань",
+  "description": "IT-школа Sky School IT в Умани: обучение в сфере IT для детей и подростков. Работает по выходным и в пятницу вечером по данным карт. Официальный сайт в поиске не найден, поэтому сайт не указан. В каталогах и на картах школа отмечена как действующая, с актуальным телефоном.",
+  "email": "",
+  "logoUrl": "",
+  "name": "Sky School IT",
+  "phone": "+380637808862",
+  "socials": [],
+  "status": "active",
+  "statusNote": "В поиске отмечена как действующая, с адресом в Умани и телефоном; официальный сайт не найден, поэтому поле website пустое.",
+  "website": ""
+ },
+ {
+  "category": "education",
+  "city": "Дрогобыч",
+  "description": "Школа английского языка English Vibe в Дрогобыче: курсы английского для детей и взрослых. Работает по будням с 10:00 до 20:00 и в субботу до 16:00 по данным каталогов. Собственный сайт в поиске не найден, связь — через Instagram. В каталогах школа отмечена как действующая.",
+  "email": "",
+  "logoUrl": "",
+  "name": "English Vibe",
+  "phone": "+380736712049",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/k.englishvibes"
+   }
+  ],
+  "status": "active",
+  "statusNote": "В поиске отмечена как действующая, с адресом в Дрогобыче и телефоном; собственного сайта нет, указан подтверждённый Instagram.",
+  "website": ""
+ },
+ {
+  "category": "education",
+  "city": "Вознесенск",
+  "description": "Вознесенская автошкола ТСОУ в Вознесенске: подготовка водителей, теоретический и практический курсы. Работает по будням с 8:00–9:00 до 17:00 по данным каталогов. В открытых источниках автошкола указана как действующая, с актуальным телефоном и сайтом.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=auto-tsou.com&sz=128",
+  "name": "Вознесенська автошкола ТСОУ",
+  "phone": "+380666973236",
+  "socials": [],
+  "status": "active",
+  "statusNote": "В поиске отмечена как действующая, с адресом в Вознесенске, телефоном и сайтом auto-tsou.com.",
+  "website": "https://auto-tsou.com/avtoshkola/voznesensk"
+ },
+ {
+  "category": "education",
+  "city": "Коломыя",
+  "description": "Центр детского развития «Мудрик» в Коломые: занятия для детей, раннее развитие, подготовка к школе. Сеть позиционирует себя как крупнейшая национальная сеть детских заведений в Украине. Коломыйский филиал работает по будням с 9:00 до 18:00. В каталогах филиал отмечен как действующий.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=mudryk.com.ua&sz=128",
+  "name": "Мудрик",
+  "phone": "+380673469754",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт (проверен 2026-11-23); телефон коломыйского филиала +380673469754 подтверждён поиском. Внимание: это франшизная сеть, возможен дубль в каталоге — проверить перед добавлением.",
+  "website": "https://mudryk.com.ua/"
+ },
+ {
+  "category": "it",
+  "city": "Каменец-Подольский",
+  "description": "Веб-студия из Каменца-Подольского: разработка сайтов, Telegram-ботов, ИИ-продуктов, бэкенд-систем и кастомных решений, поддержка 24/7. На сайте заявлены 150+ проектов, 50+ клиентов и 5+ лет опыта. В справочниках и картах студия отмечена как действующая, с актуальными контактами.",
+  "email": "mail@web-code.pp.ua",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=web-code.pp.ua&sz=128",
+  "name": "Web-Code",
+  "phone": "+380988305835",
+  "socials": [
+   {
+    "label": "Telegram",
+    "url": "https://t.me/srgrzn"
+   },
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/web_code_ua"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт и работает, указаны актуальные телефон и email.",
+  "website": "https://web-code.pp.ua/"
+ },
+ {
+  "category": "it",
+  "city": "Мукачево",
+  "description": "Сервисный центр в Мукачево: ремонт ноутбуков, планшетов и мониторов, заправка и восстановление картриджей, обслуживание серверов и компьютеров организаций. Адрес — ул. Духновича, 38. В картах и справочниках компания отмечена как действующая, с актуальным телефоном.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=vs-com.net&sz=128",
+  "name": "ВС КОМ (Vs.kom)",
+  "phone": "+380955588998",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт и работает, указаны актуальные телефоны и адрес.",
+  "website": "http://vs-com.net/"
+ },
+ {
+  "category": "it",
+  "city": "Кременчуг",
+  "description": "Веб-студия полного цикла в Кременчуге: создание и продвижение сайтов, разработка мобильных приложений. По данным справочников, работает более 10 лет, выполнено 1000+ проектов. В каталогах компания указана как действующая, контакты актуальны.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=isv7.com&sz=128",
+  "name": "ISV7 Studio",
+  "phone": "+380677358018",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Компания действующая: подтверждена справочниками и картами, телефон актуален (прямая загрузка сайта не удалась, статус подтверждён поиском).",
+  "website": "https://www.isv7.com/"
+ },
+ {
+  "category": "it",
+  "city": "Белая Церковь",
+  "description": "Сервисный центр в Белой Церкви, работает с 2008 года: заявлены 18+ лет опыта, 10 000+ ремонтов и 500+ клиентов. Ремонт ноутбуков, компьютеров и принтеров, заправка картриджей, видеонаблюдение, локальные сети, создание сайтов. Адрес — ул. Шевченко, 87. В картах отмечен как действующий сервис.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=f1service.com.ua&sz=128",
+  "name": "Сервисный центр F1",
+  "phone": "+380673223543",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт и работает, указаны актуальный телефон и адрес.",
+  "website": "http://www.f1service.com.ua/"
+ },
+ {
+  "category": "it",
+  "city": "Дрогобыч",
+  "description": "IT-компания из Дрогобыча: разработка сайтов и приложений, блокчейн, кастомный софт, ИИ-решения, облачные сервисы и SEO. На сайте заявлены 4+ года работы, 80+ проектов и 20+ специалистов. В справочниках компания указана как действующая.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=ukrtechsoft.com&sz=128",
+  "name": "Ukrtechsoft",
+  "phone": "+380983940405",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт и работает, указаны актуальные телефон и адрес (ул. Ивана Мазепы, 21е).",
+  "website": "https://www.ukrtechsoft.com/"
+ },
+ {
+  "category": "it",
+  "city": "Кременчуг",
+  "description": "Компьютерный сервис в Кременчуге: абонентское обслуживание и IT-аутсорсинг, ремонт техники, видеонаблюдение, охранная сигнализация Ajax, автоматизация торговли. Адрес — ул. Небесной Сотни, 24/37, офис 220. На сайте и в справочниках компания отмечена как действующая.",
+  "email": "support@it-kremen.com.ua",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=it-kremen.com.ua&sz=128",
+  "name": "IT-КРЕМЕНЬ",
+  "phone": "+380975272727",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт и работает, указаны актуальные телефоны, email и адрес.",
+  "website": "http://www.it-kremen.com.ua/"
+ },
+ {
+  "category": "it",
+  "city": "Коломыя",
+  "description": "Веб-студия в Коломые: разработка сайтов и интернет-магазинов, автоматизация бизнес-процессов, CRM-интеграции, SEO и Google Ads. Заявлены опыт с 2010 года, команда 40+ специалистов и рейтинг 5.0 в Google. Адрес — ул. Симона Петлюры, 9.",
+  "email": "same.te.studio@gmail.com",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=same-te.studio&sz=128",
+  "name": "Same Te Studio",
+  "phone": "+380685688431",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт и работает, указаны актуальные телефон, email и адрес.",
+  "website": "https://same-te.studio/"
+ },
+ {
+  "category": "it",
+  "city": "Измаил",
+  "description": "Компьютерный магазин и сервис в Измаиле: ремонт компьютеров и техники, продажа комплектующих. Адрес — ул. Верхнеторговая, 65. В картах и справочниках отмечен как действующий, с актуальным телефоном.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=zhelezyaka.org.ua&sz=128",
+  "name": "Железяка",
+  "phone": "+380965883388",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Компания действующая: подтверждена поиском и картами, телефон актуален (прямая загрузка сайта не удалась, статус подтверждён поиском).",
+  "website": "https://zhelezyaka.org.ua/"
+ },
+ {
+  "category": "it",
+  "city": "Белгород-Днестровский",
+  "description": "Компьютерный центр в Белгороде-Днестровском: настройка и ремонт компьютеров, ноутбуков и принтеров, заправка картриджей, сети и видеонаблюдение, IT-аутсорсинг. Опыт сотрудников — более 15 лет, есть удалённая поддержка и сопровождение электронной отчётности. Адрес — ул. Измаильская, 58.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=tehdata.od.ua&sz=128",
+  "name": "Техдата Сервис",
+  "phone": "+380678902211",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт открыт и работает, указаны актуальные телефон и адрес.",
+  "website": "http://tehdata.od.ua/"
+ },
+ {
+  "category": "it",
+  "city": "Вознесенск",
+  "description": "Сервисный центр в Вознесенске, работает с 2003 года: ремонт компьютеров и ноутбуков, чистка и модернизация, установка Windows, удаление вирусов, настройка сетей и Wi-Fi, изготовление ЭЦП и программы M.E.Doc. Адрес — ул. Шевченко, 3/21. Сайт и карты подтверждают, что сервис действующий.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=simpleks.com.ua&sz=128",
+  "name": "Сервисный центр ХАРД (Simpleks)",
+  "phone": "+380667490197",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Страница сервисного центра на официальном сайте Simpleks открыта и работает, указан актуальный телефон.",
+  "website": "https://simpleks.com.ua/servisnyi-tsentr-shevchenka"
+ },
+ {
+  "category": "it",
+  "city": "Стрый",
+  "description": "Сервисный центр в Стрые: ремонт компьютеров, ноутбуков, принтеров и мобильных телефонов, заправка картриджей, продажа комплектующих, печать А4 и А3. Адрес — ул. Шевченко, 65. В картах и справочниках отмечен как действующий.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=fozot.com.ua&sz=128",
+  "name": "ФОЗОТ-Сервис",
+  "phone": "+380673740622",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Официальный сайт существует, в картах компания отмечена как действующая, телефон актуален.",
+  "website": "http://fozot.com.ua/"
+ },
+ {
+  "category": "it",
+  "city": "Кременчуг",
+  "description": "Веб-студия в Кременчуге: разработка и поддержка сайтов для местного бизнеса. Адрес — ул. Первомайская, 20. В картах компания отмечена как действующая, с актуальным телефоном и страницей в Instagram.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "WebColor Studio",
+  "phone": "+380969280487",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/webcolor.studio"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Компания действующая: подтверждена картами, телефон актуален; собственный сайт не найден, указана проверенная страница в Instagram.",
+  "website": "https://www.instagram.com/webcolor.studio"
+ },
+ {
+  "category": "it",
+  "city": "Кременчуг",
+  "description": "Маркетинговое агентство в Кременчуге: продвижение бизнеса, реклама и digital-услуги. Адрес — ул. Софиевская, 28, офис 58. В картах и Instagram компания отмечена как действующая.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Woodo Marketing Agency",
+  "phone": "+380973003180",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/woodo.agency"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Компания действующая: подтверждена картами, телефон актуален; собственный сайт не найден, указана проверенная страница в Instagram.",
+  "website": "https://www.instagram.com/woodo.agency"
+ },
+ {
+  "category": "it",
+  "city": "Конотоп",
+  "description": "Компьютерный сервис в Конотопе: ремонт и настройка компьютеров и техники. Работает с 1 мая 2013 года, рейтинг 5.0 в картах. В справочниках отмечен как действующий, с актуальным телефоном.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=m.facebook.com&sz=128",
+  "name": "КомпМайстер",
+  "phone": "+380677778231",
+  "socials": [
+   {
+    "label": "Facebook",
+    "url": "https://m.facebook.com/www0677778231"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Компания действующая: подтверждена картами, телефон актуален; собственный сайт не найден, указана проверенная страница в Facebook.",
+  "website": "https://m.facebook.com/www0677778231"
+ },
+ {
+  "category": "it",
+  "city": "Ромны",
+  "description": "Магазин и сервис в Ромнах: продажа и ремонт компьютерной техники любой сложности. Адрес — ул. Пушкина, 25. В картах отмечен как действующий, с актуальными контактами и страницей в Instagram.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Комп'ютери для всіх",
+  "phone": "+380963527139",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/comp2all"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Компания действующая: подтверждена картами, телефон актуален; собственный сайт не найден, указана проверенная страница в Instagram.",
+  "website": "https://www.instagram.com/comp2all"
+ },
+ {
+  "category": "it",
+  "city": "Первомайск",
+  "description": "Сервисный центр в Первомайске: ремонт компьютеров и техники. Адрес — ул. Грушевского, 41. В картах и Facebook компания отмечена как действующая, с актуальным телефоном.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=facebook.com&sz=128",
+  "name": "Restart Servis",
+  "phone": "+380685389225",
+  "socials": [
+   {
+    "label": "Facebook",
+    "url": "https://www.facebook.com/groups/489453421824072/"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Компания действующая: подтверждена картами, телефон актуален; собственный сайт не найден, указана проверенная группа в Facebook.",
+  "website": "https://www.facebook.com/groups/489453421824072/"
+ },
+ {
+  "category": "it",
+  "city": "Стрый",
+  "description": "Сервис по ремонту компьютеров в Стрые: диагностика и ремонт техники. Адрес — ул. Ивана Мазепы, 1/4. В картах отмечен как действующий, с актуальным телефоном и страницей в Instagram.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "King Comp",
+  "phone": "+380956526890",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/kingcomp_x/"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Компания действующая: подтверждена картами, телефон актуален; собственный сайт не найден, указана проверенная страница в Instagram.",
+  "website": "https://www.instagram.com/kingcomp_x/"
+ },
+ {
+  "category": "food",
+  "city": "Умань",
+  "description": "Кав'ярня-пекарня в Умані на вул. Максима Залізняка. В меню — кава, матча, латте, свіжий хліб та випічка власного виробництва. Працює щодня з 7:30 до 22:00, у неділю з 9:00. В сети о заведении есть отзывы посетителей, гости отмечают кофе и свежую выпечку.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Паляниця",
+  "phone": "+380953973353",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://instagram.com/palyanytsya_uman"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: статус Active и актуальные часы работы в поиске, телефон подтверждён справочником.",
+  "website": "https://instagram.com/palyanytsya_uman"
+ },
+ {
+  "category": "food",
+  "city": "Белая Церковь",
+  "description": "Грузинский ресторан в Белой Церкви на ул. Чкалова, 11. В меню — блюда грузинской кухни, работает ежедневно с 12:00 до 22:00. В сети о ресторане есть отзывы посетителей, гости отмечают грузинскую кухню и атмосферу.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Suliko",
+  "phone": "+380981117411",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://instagram.com/suliko_bc"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующий: статус Active в поиске, телефон и часы работы подтверждены справочником.",
+  "website": "https://instagram.com/suliko_bc"
+ },
+ {
+  "category": "food",
+  "city": "Каменец-Подольский",
+  "description": "Кафе в Каменце-Подольском на ул. Старобульварной, 4. В меню — блюда украинской и европейской кухни по домашним рецептам, завтраки, супы, десерты и кофе. Работает ежедневно с 9:00 до 23:00. В сети кафе называют одним из любимых мест горожан, гости хвалят домашнюю кухню и уютный интерьер.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=kafenikakp.business.site&sz=128",
+  "name": "Кафе «Ника»",
+  "phone": "+380678112968",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующее: меню и часы работы опубликованы, телефон подтверждён справочником, упоминается в путеводителях по городу.",
+  "website": "https://kafenikakp.business.site/"
+ },
+ {
+  "category": "food",
+  "city": "Каменец-Подольский",
+  "description": "Грузинское кафе в Каменце-Подольском на ул. Татарской, 23. В меню — харчо, хачапури, мясные блюда, десерты и кофе. Работает ежедневно с 9:00 до 22:00. В сети о кафе есть отзывы посетителей, гости отмечают грузинские блюда и демократичные цены.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=georgian-restaurant-372.business.site&sz=128",
+  "name": "Cafe Achma",
+  "phone": "+380673813047",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующее: меню с актуальными часами работы опубликовано, телефоны подтверждены справочником.",
+  "website": "https://georgian-restaurant-372.business.site/"
+ },
+ {
+  "category": "food",
+  "city": "Мукачево",
+  "description": "Кав'ярня в Мукачево на ул. Ивана Паркания, 4. В меню — завтраки, десерты, гамбовцы, блины, сырники, тыквенный суп и молочное меню. Работает ежедневно с 8:00 до 20:00. В сети о кав'ярне есть отзывы посетителей с оценкой около 3,7 из 5, гости отмечают завтраки и десерты.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Молочарня",
+  "phone": "+380994088185",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://instagram.com/molocharnya_mukachevo"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующая: статус Active, часы работы и телефон подтверждены справочником, есть отзывы посетителей.",
+  "website": "https://instagram.com/molocharnya_mukachevo"
+ },
+ {
+  "category": "delivery",
+  "city": "Кременчуг",
+  "description": "Паб с доставкой еды в Кременчуге, пр. Свободы, 58а. Доставка по городу за 15–40 минут, самовывоз со скидкой 10%. В меню — гриль и шашлык, хачапури, бургеры, паназиатская кухня, бизнес-ланчи и «Здоровая тарелка» с подсчётом КБЖУ. В сети о заведении есть отзывы, гости отмечают доставку и гриль-меню.",
+  "email": "greenpub.kremen2024@gmail.com",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=greenpub-kremen.com&sz=128",
+  "name": "Green Pub",
+  "phone": "+380982002222",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующий: официальный сайт открыт 23.11.2026, онлайн-меню с актуальными акциями и ценами, телефон и email указаны на сайте.",
+  "website": "https://www.greenpub-kremen.com"
+ },
+ {
+  "category": "food",
+  "city": "Кременчуг",
+  "description": "Ресторан в Кременчуге при отеле «Кремінь». В меню — салаты, супы, стейки, шашлык и люля-кебаб, рыба и морепродукты, паста, фирменный борщ, десерты и вино. В сети о ресторане есть отзывы посетителей, гости отмечают кухню и обслуживание.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=kremen-rest.com.ua&sz=128",
+  "name": "Кремінь",
+  "phone": "",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующий: официальный сайт с онлайн-меню открыт 23.11.2026, цены и блюда актуальны (фото блюд осени 2026 года).",
+  "website": "https://kremen-rest.com.ua"
+ },
+ {
+  "category": "food",
+  "city": "Миргород",
+  "description": "Ресторан в Миргороде на ул. Гоголя, 116-в. В меню — шашлык и блюда на мангале, работает ежедневно с 10:00 до 23:00. В сети о ресторане есть отзывы посетителей, гости отмечают мясные блюда и кухню.",
+  "email": "harina1961pp@gmail.com",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=shashlychnyi-dvor.eatbu.com&sz=128",
+  "name": "Шашличний двір",
+  "phone": "+380662125777",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующий: страница заведения с адресом, телефоном, email и часами работы найдена в поиске.",
+  "website": "https://shashlychnyi-dvor.eatbu.com/"
+ },
+ {
+  "category": "food",
+  "city": "Дрогобыч",
+  "description": "Гастропаб в Дрогобыче на пл. Рынок, 31. В меню — бургеры, тартар, блюда европейской кухни, кофе и коктейли. Работает ежедневно с 9:00 до 23:00. В сети о пабе есть отзывы посетителей, гости отмечают бургеры и атмосферу в центре города.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "GastroPub KABINET",
+  "phone": "+380680848258",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/gastropub.kabinet"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующий: статус Active, адрес, телефон и часы работы подтверждены справочником.",
+  "website": "https://www.instagram.com/gastropub.kabinet"
+ },
+ {
+  "category": "food",
+  "city": "Ковель",
+  "description": "Ресторан в Ковеле на ул. Адама Мицкевича, 10. В меню — блюда с огня, стейки, бургеры, борщ, сало, вино и коктейли. Работает ежедневно с 11:00 до 22:30. В сети о ресторане есть отзывы посетителей, гости отмечают мясные блюда и бургеры.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=classic.com.ua&sz=128",
+  "name": "М'ясо та Фольклор",
+  "phone": "+380990751550",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующий: статус Active, адрес, телефон и часы работы подтверждены справочником.",
+  "website": "http://classic.com.ua/"
+ },
+ {
+  "category": "food",
+  "city": "Ковель",
+  "description": "Семейный ресторан в центре Ковеля на ул. Независимости, 98. Позиционируется как ресторан для всей семьи, проводит банкеты. В меню — стейки, лосось, супы, десерты, маття. Работает ежедневно с 10:00 до 23:00. В сети у ресторана оценка 4,7 из 5 по 32 отзывам, гости хвалят кухню и семейную атмосферу.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Orange",
+  "phone": "+380958922217",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://instagram.com/orange_kovel"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующий: статус Active, рейтинг 4,7 из 5 по 32 отзывам, телефон и часы работы подтверждены справочником.",
+  "website": "https://instagram.com/orange_kovel"
+ },
+ {
+  "category": "food",
+  "city": "Ковель",
+  "description": "Кафе в Ковеле на ул. Независимости, 134. Кофейня с десертами и лёгкими блюдами, работает ежедневно с 9:00 до 21:00. В сети о кафе есть отзывы посетителей, гости отмечают кофе и спокойную атмосферу.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=facebook.com&sz=128",
+  "name": "Joie",
+  "phone": "+380999372537",
+  "socials": [
+   {
+    "label": "Facebook",
+    "url": "https://www.facebook.com/joiekovel"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующее: статус Active, адрес, телефон и часы работы подтверждены справочником.",
+  "website": "https://www.facebook.com/joiekovel"
+ },
+ {
+  "category": "food",
+  "city": "Хмельник",
+  "description": "Кофейня в Хмельнике на ул. Курортной, 2, на территории санатория. В меню — кофейные напитки, десерты и выпечка, есть столики и Wi-Fi. Работает ежедневно с 8:00 до 21:00. В сети у кофейни оценка 4,5 из 5 по 37 отзывам, гости хвалят вкусную каву и приветливый персонал.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=stakancoffee.com.ua&sz=128",
+  "name": "Stakan Coffee",
+  "phone": "+380983172424",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующая: сайт stakancoffee.com.ua указан в справочнике, рейтинг 4,5 из 5 по 37 отзывам, телефон подтверждён.",
+  "website": "https://stakancoffee.com.ua"
+ },
+ {
+  "category": "food",
+  "city": "Хмельник",
+  "description": "Кафе-ресторан в Хмельнике. В меню — блюда в хоспере (стейки, шашлык, рёбра, форель), закуски к пиву, деруны и горячие блюда украинской кухни. В сети о заведении есть отзывы посетителей, гости отмечают блюда на огне и кухню.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=sites.google.com&sz=128",
+  "name": "Старе Місто",
+  "phone": "",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующее: меню на официальном сайте обновлялось 5 дней назад (краул 18.11.2026), цены в гривнах актуальны.",
+  "website": "https://sites.google.com/view/kafestaremisto"
+ },
+ {
+  "category": "food",
+  "city": "Трускавец",
+  "description": "Ресторан в Трускавце с акцентом на рыбу и украинскую кухню. В меню — завтраки, холодные и горячие закуски, салаты, первые блюда, рыба, блюда к пиву, десерты и детское меню. В сети о ресторане есть отзывы посетителей, гости отмечают рыбные блюда и домашнюю кухню.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=sites.google.com&sz=128",
+  "name": "Хата Рибака",
+  "phone": "",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующий: официальное меню открыто 23.11.2026, цены обновлены (ассорти рыбы, форель, сало), заведение работает.",
+  "website": "https://sites.google.com/view/hatarybaka"
+ },
+ {
+  "category": "food",
+  "city": "Трускавец",
+  "description": "Этно-ресторан в Трускавце на ул. Городище, 8. Заведение с украинской этнической кухней и атмосферой, работает ежедневно с 11:00 до 01:00. В сети о ресторане есть отзывы посетителей, гости отмечают этническую кухню и атмосферу.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=6342f77b8a5b7.site123.me&sz=128",
+  "name": "Йо-мойо",
+  "phone": "+380324768075",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующий: адрес, телефон и график работы подтверждены городским справочником misto.online (обновлён 22.11.2026).",
+  "website": "https://6342f77b8a5b7.site123.me/"
+ },
+ {
+  "category": "food",
+  "city": "Костополь",
+  "description": "Ресторан в Костополе на ул. 8 Березня, 11. Заведение с европейской кухней, работает ежедневно с 10:00 до 22:00. В сети о ресторане есть отзывы посетителей, гости отмечают кухню и обслуживание.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=instagram.com&sz=128",
+  "name": "Barvy",
+  "phone": "+380682367227",
+  "socials": [
+   {
+    "label": "Instagram",
+    "url": "https://www.instagram.com/barvu_kostopil"
+   }
+  ],
+  "status": "active",
+  "statusNote": "Действующий: статус Active, адрес, телефон и часы работы подтверждены справочником.",
+  "website": "https://www.instagram.com/barvu_kostopil"
+ },
+ {
+  "category": "food",
+  "city": "Александрия",
+  "description": "Итальянское кафе в Александрии на ул. Софиевской, возле гостиницы «Дружба». В меню — пицца, паста, салаты, бургеры, десерты и кофе. Работает ежедневно с 10:00 до 21:00. В сети о кафе есть отзывы посетителей, гости отмечают пасту и итальянскую кухню.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=small-italy.com.ua&sz=128",
+  "name": "Маленька Італія",
+  "phone": "+380501000214",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Действующее: официальный сайт small-italy.com.ua, меню и часы работы опубликованы, телефон подтверждён справочником.",
+  "website": "https://small-italy.com.ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Киев",
+  "description": "Украинский интернет-магазин электроники, гаджетов и бытовой техники technix-store.com: зарядные станции, роботы-пылесосы, техника DJI, смарт-устройства для дома, аксессуары и оригинальные наборы LEGO. Оплата онлайн, при получении и криптовалютой, доставка Новой почтой, гарантия. В отзывах на сайте покупатели хвалят быструю отправку в день заказа, живую консультацию и честные цены.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=technix-store.com&sz=128",
+  "name": "TECHNIX",
+  "phone": "+380959070075",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Сайт работает, на главной свежие отзывы покупателей от ноября 2026 года, указаны действующие телефоны.",
+  "website": "https://technix-store.com/"
+ },
+ {
+  "category": "shops",
+  "city": "Львов",
+  "description": "Интернет-магазин электроники и бытовой техники Saren (saren.com.ua): зарядные станции, грили, планетарные миксеры, мультиварки, принтеры, акустика, техника для дома и кухни. Доставка по Украине Новой почтой. На сайте 302 отзыва с оценкой 4.9, покупатели отмечают быструю связь консультантов, оперативную отправку и товар в заводской упаковке.",
+  "email": "info@saren.com.ua",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=saren.com.ua&sz=128",
+  "name": "Saren",
+  "phone": "+380800319275",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Сайт работает, страница отзывов обновлялась 2 дня назад, отзывы датированы ноябрём 2026 года; адрес во Львове подтверждён справочником Orgpage.",
+  "website": "https://saren.com.ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Гостинцево",
+  "description": "Украинский интернет-магазин и производитель Atleto (atleto.ua): детские товары, спортивный инвентарь, батуты, детские игровые комплексы, электромобили и квадроциклы для детей, беговые дорожки, сапборды. Доставка по Украине Новой почтой и Delivery, гарантия на товары. На сайте заявлено, что компания несколько лет работает на рынке Украины и берёт на себя гарантийные обязательства.",
+  "email": "sales@atleto.ua",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=atleto.ua&sz=128",
+  "name": "Atleto",
+  "phone": "+380676734991",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Сайт работает, каталог и карточки товаров обновлялись в ноябре 2026 года; адрес во Львовской области (с. Гостинцево, ул. Львовская, 2А) указан на сайте.",
+  "website": "https://atleto.ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Киев",
+  "description": "Интернет-магазин автозапчастей AvtoDay (avtoday.com.ua) в Киеве: запчасти, расходники и комплекты для ТО, подбор по автомобилю, а также СТО с диагностикой и ремонтом. Заказы отправляются по Украине, есть скидки для ветеранов. В отзывах на сайте клиенты пишут, что пользуются магазином несколько лет, хвалят оригинальные запчасти, быстрый подбор и обслуживание.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=avtoday.com.ua&sz=128",
+  "name": "AvtoDay",
+  "phone": "+380970488189",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Сайт работает, страница отзывов обновлялась 7 дней назад, отзывы от ноября 2026 года; адрес в Киеве (просп. Берестейский, 59а) подтверждён справочником.",
+  "website": "https://avtoday.com.ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Одесса",
+  "description": "Интернет-магазин и производитель автомобильных ковриков Star-Tex (star-tex.ua): 3D-коврики в салон и багажник, в том числе EVA-коврики с бортами, изготовление по лекалам конкретной модели авто. Доставка по Украине Новой почтой за 2-3 дня, есть самовывоз в Одессе. В отзывах на сайте 33 отзыва с оценкой 5.0, покупатели хвалят точную посадку, консультацию и быструю доставку.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=star-tex.ua&sz=128",
+  "name": "Star-Tex",
+  "phone": "+380738314732",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Сайт работает, отзывы датированы ноябрём 2026 года; в отзывах упоминается самовывоз в Одессе.",
+  "website": "https://star-tex.ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Киев",
+  "description": "Интернет-зоомагазин Smart Zoo (smartzoo.ua): корма и лакомства, лежанки, наполнители, одежда и аксессуары для кошек и собак, товары для грызунов, птиц, аквариумов, террариумов и прудов. Работает напрямую с официальными дистрибьюторами, доставка по всей Украине, есть офлайн-магазины в Киеве. В отзывах на сайте покупатели хвалят быструю отправку, актуальные цены и качество товаров.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=smartzoo.ua&sz=128",
+  "name": "Smart Zoo",
+  "phone": "+380800333145",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Сайт работает, страница обновлялась в ноябре 2026 года, на сайте есть свежие отзывы и бесплатный номер 0 800 333-145.",
+  "website": "https://smartzoo.ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Днепр",
+  "description": "Интернет-магазин строительных и отделочных материалов Budivelnik Shop (budivelnik.shop): самоклеящиеся 3D-панели, обои, плитка и мозаика, декоративные рейки, ПВХ-панели, виниловые напольные покрытия, плёнка для мебели, садовые мебель и товары для дома. Онлайн-заказ и доставка по Украине; твёрдое топливо и стройматериалы — с доставкой по Днепру и пригороду. Магазин позиционирует себя как площадка с актуальными ценами и регулярно обновляемым ассортиментом.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=budivelnik.shop&sz=128",
+  "name": "Budivelnik Shop",
+  "phone": "+380666319223",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Сайт работает, страница обновлялась 18 дней назад, указаны действующие телефоны; направление по Днепру описано на главной странице.",
+  "website": "https://budivelnik.shop/"
+ },
+ {
+  "category": "shops",
+  "city": "Харьков",
+  "description": "Интернет-магазин женской одежды украинского производителя RicaMare (ricamare.com.ua): платья, сорочки с вышивкой, футболки, свитшоты, одежда больших размеров. В отзывах на сайте 11 отзывов с оценкой 4.3: покупательницы хвалят качество пошива, соответствие цвета и размера, работу консультантов; есть и критичные замечания по усадке ткани после стирки.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=ricamare.com.ua&sz=128",
+  "name": "RicaMare",
+  "phone": "+380639958988",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Сайт работает, страница отзывов обновлялась 29 дней назад, отзывы от октября 2026 года; в отзывах упоминается Харьков.",
+  "website": "https://ricamare.com.ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Киев",
+  "description": "Интернет-магазин женского одежды украинского производителя Kate Store (katestore.com.ua): базовые модели — джинсы, сорочки, свитеры, брюки и костюмы, которые легко сочетать между собой. Есть офлайн-магазин с примеркой в Киеве (ул. Гната Хоткевича, 22). В отзывах на сайте покупательницы хвалят посадку джинсов, мягкость ткани и соответствие размеров.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=katestore.com.ua&sz=128",
+  "name": "Kate Store",
+  "phone": "+380679025777",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Сайт работает, на главной свежие отзывы от ноября 2026 года; адрес офлайн-магазина в Киеве указан на сайте.",
+  "website": "https://katestore.com.ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Одесса",
+  "description": "Интернет-магазин спортивных товаров Sport-Extrim (sport-extrim.com): самокаты (в том числе трюковые), ролики, скейтборды и пенни-борды, защита и шлемы. Отправка в день заказа, доставка Новой почтой и Укрпочтой по Украине, оплата в том числе наложенным платежом. На сайте большая страница отзывов: покупатели чаще всего хвалят быструю доставку и качество, встречаются жалобы на задержки ответов менеджера и ошибки в комплектации.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=sport-extrim.com&sz=128",
+  "name": "Sport-Extrim",
+  "phone": "",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Сайт работает, страница отзывов обновлялась 8 часов назад; в отзывах упоминается отправка из Одессы.",
+  "website": "https://sport-extrim.com/"
+ },
+ {
+  "category": "shops",
+  "city": "Киев",
+  "description": "Интернет-зоомагазин «101 Далматин» (101dalmatin.ua): корма для кошек и собак, аксессуары для прогулок, средства ухода и гигиены, лежанки, переноски, игрушки, товары для грызунов, птиц, рыб и рептилий. Доставка по всей Украине за 24 часа, оплата Apple Pay, Google Pay и картой. На сайте заявлены быстрая доставка и широкий ассортимент; магазин также представлен в Харькове.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=101dalmatin.ua&sz=128",
+  "name": "101 Далматин",
+  "phone": "+380508008670",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Сайт работает, на сайте указан адрес в Киеве (ул. Елизаветы Чавдар, 2) и телефон; в каталоге заявлена доставка по Украине за 24 часа.",
+  "website": "https://101dalmatin.ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Белая Церковь",
+  "description": "Интернет-магазин товаров для дома STARK (furnituraa.com) в Белой Церкви: мебельная фурнитура и товары для дома. Работает ежедневно, есть офлайн-точка по ул. Павличенко, 31. В справочниках магазин отмечен как действующий, с указанным телефоном и сайтом.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=furnituraa.com&sz=128",
+  "name": "STARK",
+  "phone": "+380976500012",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Магазин отмечен как действующий (Operating Status: Active) в справочнике с адресом в Белой Церкви и телефоном; сайт furnituraa.com открывается.",
+  "website": "https://furnituraa.com/"
+ },
+ {
+  "category": "shops",
+  "city": "Белая Церковь",
+  "description": "Магазин «Лавка Чудес» (lavka-chudes.in.ua) в Белой Церкви: украинский бренд наборов для творчества — картины по номерам, товары для хобби и рукоделия. Продукция бренда продаётся и в других украинских интернет-магазинах. Магазин работает ежедневно с 9:00 до 18:30, есть самовывоз по ул. Василия Симоненко, 3.",
+  "email": "",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=lavka-chudes.in.ua&sz=128",
+  "name": "Лавка Чудес",
+  "phone": "+380986207553",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Магазин отмечен как действующий в справочнике с адресом в Белой Церкви, телефоном и графиком работы; товары бренда есть в продаже на сторонних сайтах.",
+  "website": "https://lavka-chudes.in.ua/ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Дрогобыч",
+  "description": "Сеть спортивных магазинов «Планета спорту» (planetasportu.ua) в Дрогобыче, Стрие и Самборе: спортивный инвентарь, товары для тренировок и активного отдыха, оптовая торговля. Магазин в Дрогобыче — ул. Сагайдачного, 37а, работает пн-пт 09:00–18:00, сб 09:00–17:00. Компания участвует в государственных закупках как поставщик спортинвентаря, что подтверждает её деятельность.",
+  "email": "info@planetasportu.ua",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=planetasportu.ua&sz=128",
+  "name": "Планета спорту",
+  "phone": "+380676792869",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Сайт работает, карточки товаров обновлялись в ноябре 2026 года; адрес и телефон в Дрогобыче подтверждены сайтом и документами Prozorro.",
+  "website": "https://planetasportu.ua/"
+ },
+ {
+  "category": "shops",
+  "city": "Гатное",
+  "description": "Детский бутик Patte-Patte (patte-patte.com.ua): товары для детей, одежда и аксессуары для малышей, товары для мам. Магазины — в ТЦ «Мануфактура» в Ходосовке (ул. Березовая, 2) и в Гатном (ул. Киевская, 2В), работают ежедневно. На сайте указаны телефоны и email для заказов, доставка по Украине.",
+  "email": "order@patte-patte.com.ua",
+  "logoUrl": "https://www.google.com/s2/favicons?domain=patte-patte.com.ua&sz=128",
+  "name": "Patte-Patte",
+  "phone": "+380672725500",
+  "socials": [],
+  "status": "active",
+  "statusNote": "Сайт работает, на сайте указаны два действующих магазина под Киевом, телефоны и email; страница обновлялась 40 дней назад.",
+  "website": "https://patte-patte.com.ua/"
+ }
+]
