@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-11-23",
+  "live_total_getoverview": 4730,
+  "catalog_entries": 4659,
+  "per_category": {
+    "auto": 496,
+    "beauty": 709,
+    "delivery": 273,
+    "education": 442,
+    "finance": 508,
+    "food": 242,
+    "it": 411,
+    "realestate": 424,
+    "shops": 681,
+    "travel": 473
+  },
+  "sources": "Consolidated from local batch payload files (final-to-add.json where present, otherwise researcher group payloads). Batches 1-11 are only partially covered: their payloads survive as scattered research notes, not per-batch JSON.",
+  "caveats": [
+    "Payload-based reconstruction, NOT a live-database dump: a small number of candidates that were rejected as duplicates during verification may be present, and post-add corrections (e.g. Payeer closed status, logo backfill) may not be reflected.",
+    "The exact live export (catalog-live.json) is produced separately from the artifact database and replaces this file when ready.",
+    "Application source code is NOT included: the OtzyvTop app runs in the Muse artifact runtime and cannot be exported by the assistant (artifact.export fails for fullstack artifacts). This backup preserves data, working files and documentation."
+  ]
+}
