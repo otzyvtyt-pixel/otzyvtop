@@ -1,7 +1,7 @@
 # OtzyvTop — backup
 
 OtzyvTop — bilingual (Russian / Ukrainian) review website for all companies:
-ratings, reviews, company pages. Private backup repository.
+ratings, reviews, company pages. Backup repository.
 
 - Live site: Muse fullstack artifact `otzyvtop` (runs in the Muse runtime).
 - Catalog on 2026-11-23: **4730 companies**, 0 reviews yet.
