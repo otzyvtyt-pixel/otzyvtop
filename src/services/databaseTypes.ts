@@ -38,6 +38,16 @@ export interface CreateReviewInput {
   cons: string;
   text: string;
   confirmedPurchase: boolean;
+  senderMeta?: {
+    ip: string;
+    isVpn: boolean;
+    countryCode: string;
+    deviceId: string;
+    userAgent: string;
+    screen: string;
+    spamSuspect: boolean;
+    spamReasons: string[];
+  };
 }
 
 export interface CreateCommentInput {

@@ -3,6 +3,12 @@ import { Check, CloudArrowUp, ShieldCheck, Trash, X } from '@phosphor-icons/reac
 import type { Language, ModerationStatus, Review, ReviewComment } from '../types.ts';
 import { UI_TEXT } from '../i18n.ts';
 import { database, type ImportProgress } from '../services/database.ts';
+import {
+  getSavedGeminiKey,
+  moderateReviewWithGemini,
+  saveGeminiKey,
+  type AiModerationResult,
+} from '../services/geminiAdmin.ts';
 
 interface AdminModalProps {
   lang: Language;
@@ -12,7 +18,11 @@ interface AdminModalProps {
 
 export function AdminModal({ lang, onClose, onDataChanged }: AdminModalProps) {
   const t = UI_TEXT[lang];
-  const [tab, setTab] = useState<'moderation' | 'import'>('moderation');
+  const [tab, setTab] = useState<'moderation' | 'import' | 'ai'>('moderation');
+  const [geminiKey, setGeminiKey] = useState(() => getSavedGeminiKey());
+  const [geminiSavedNotice, setGeminiSavedNotice] = useState(false);
+  const [aiCheckingId, setAiCheckingId] = useState<string | null>(null);
+  const [aiResults, setAiResults] = useState<Record<string, AiModerationResult>>({});
   const [reviews, setReviews] = useState<Review[]>([]);
   const [comments, setComments] = useState<ReviewComment[]>([]);
   const [loadingQueue, setLoadingQueue] = useState(true);
@@ -157,6 +167,17 @@ export function AdminModal({ lang, onClose, onDataChanged }: AdminModalProps) {
             }`}
           >
             {t.adminImportTab}
+          </button>
+          <button
+            type="button"
+            onClick={() => setTab('ai')}
+            className={`px-4 py-2 text-xs font-semibold rounded-t-xl border-b-2 transition-colors cursor-pointer ${
+              tab === 'ai'
+                ? 'border-emerald-600 text-emerald-800 bg-emerald-50/50'
+                : 'border-transparent text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            AI / Настройки
           </button>
         </div>
 
@@ -353,6 +374,45 @@ export function AdminModal({ lang, onClose, onDataChanged }: AdminModalProps) {
                 <CloudArrowUp weight="duotone" className="w-4 h-4" aria-hidden="true" />
                 <span>{importing ? 'Импорт...' : t.importCatalogBtn}</span>
               </button>
+            </div>
+          )}
+
+          {tab === 'ai' && (
+            <div className="space-y-4">
+              <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
+                <h3 className="text-sm font-semibold text-slate-900">
+                  Google Gemini API Key (для AI-модерации)
+                </h3>
+                <p className="text-xs text-slate-600">
+                  Ключ сохраняется только в localStorage вашего браузера и не попадает в публичный код.
+                  AI проверяет отзывы на спам/рекламу, но разрешает публикацию карт и телефонов мошенников.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <input
+                    type="password"
+                    value={geminiKey}
+                    onChange={(e) => setGeminiKey(e.target.value)}
+                    placeholder="AIzaSy..."
+                    className="flex-1 min-w-[220px] px-3 py-2 text-sm border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => {
+                      saveGeminiKey(geminiKey);
+                      setGeminiSavedNotice(true);
+                      setTimeout(() => setGeminiSavedNotice(false), 2500);
+                    }}
+                    className="px-4 py-2 text-sm font-semibold text-white bg-emerald-600 rounded-xl hover:bg-emerald-700 cursor-pointer"
+                  >
+                    Сохранить ключ
+                  </button>
+                </div>
+                {geminiSavedNotice && (
+                  <div className="text-xs font-medium text-emerald-700">
+                    Ключ сохранён локально.
+                  </div>
+                )}
+              </div>
             </div>
           )}
         </div>

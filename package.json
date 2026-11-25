@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && tsx scripts/prerenderSeo.ts",
+    "build:vite": "vite build",
+    "build:seo": "tsx scripts/prerenderSeo.ts",
     "build:seed": "tsx scripts/buildSeedBundle.ts",
     "import:firestore": "tsx scripts/importToFirestore.ts",
     "test": "tsx --test server/reviewSeeder.test.ts firestore.rules.test.ts src/utils/catalogLogic.test.ts",
@@ -16,7 +18,7 @@
     "@firebase/eslint-plugin-security-rules": "^0.0.2",
     "@phosphor-icons/react": "^2.1.10",
     "express": "^4.21.2",
-    "firebase": "^13.4.0",
+    "firebase": "^11.10.0",
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

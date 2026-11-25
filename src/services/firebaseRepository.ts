@@ -575,6 +575,7 @@ export class FirebaseDatabaseRepository implements DatabaseRepository {
         helpfulCount: 0,
         unhelpfulCount: 0,
         comments: [],
+        ...(input.senderMeta ? { senderMeta: input.senderMeta } : {}),
       });
 
       return {

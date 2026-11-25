@@ -137,6 +137,8 @@ export function CompanyPage({
     if (submitting) return;
     setSubmitting(true);
     try {
+      const { collectSenderMeta } = await import('../utils/antiSpam.ts');
+      const senderMeta = await collectSenderMeta();
       const created = await database.addReview({
         companyId,
         author: author || authUser.displayName || 'Гость',
@@ -145,6 +147,7 @@ export function CompanyPage({
         cons,
         text,
         confirmedPurchase,
+        senderMeta,
       });
       setRating(5);
       setPros('');
