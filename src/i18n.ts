@@ -81,7 +81,7 @@ export const UI_TEXT = {
     statReviews: 'Всего отзывов',
     categoriesTitle: 'Выберите категорию бизнеса',
     categoriesSubtitle: 'Нажмите на отрасль, чтобы открыть проверенные компании и отзывы клиентов',
-    scammerCardDesc: 'Реестр жалоб пользователей и недобросовестных проектов по данным moshennik.eu',
+    scammerCardDesc: 'Реестр жалоб и недобросовестных проектов: проверка работы сайтов, рекламы и доменов в сети',
     openCategoryBtn: 'Открыть раздел',
     companiesCountSuffix: (n: number) => `${n.toLocaleString('ru-RU')} компаний`,
     featuredTitle: 'Компании в каталоге',
@@ -199,7 +199,7 @@ export const UI_TEXT = {
     topCitiesTitle: 'Города с наибольшим числом компаний',
     close: 'Закрыть',
     footerCopyright: 'OtzyvTop — каталог компаний Украины и честные отзывы',
-    footerSource: 'Данные проверены и синхронизированы с реестром moshennik.eu',
+    footerSource: 'Актуальность сайтов, рекламы и доменов проверена в открытых источниках (24.11.2026)',
     mobileHome: 'Главная',
     mobileCatalog: 'Каталог',
     mobileAdd: 'Добавить',
@@ -226,11 +226,40 @@ export const UI_TEXT = {
     websiteParkedLabel: 'Домен припаркован / изменён',
     activeIn2026: 'Работает в 2026',
     scamActiveStatus: 'Проект активен (2026)',
+    scamActiveAdsStatus: 'Активен · Реклама 2026',
     scamDefunctStatus: 'Не работает · Архив',
+    adsLabel: 'Реклама и трекеры',
+    adsRunningSummary: (count: number, lastAt: string) =>
+      `Google Ads: ${count} об. (показ до ${lastAt})`,
+    adsNoCampaignsNote: 'Активная реклама в Google Ads не обнаружена',
+    domainHistoryLabel: 'Домен и архив',
+    tgChannelActiveLabel: 'Telegram-канал',
     archiveReviewsNotice: (date: string) =>
-      `По проверке на ${date || '24.11.2026'} компания или её сайт не работают. Ниже собраны архивные отзывы за период активности.`,
+      `По проверке в сети на ${date || '24.11.2026'} сайт и рекламная активность проекта прекращены. Ниже собраны архивные отзывы за период работы.`,
     scamActiveNotice: (date: string) =>
-      `Ресурс или каналы проекта остаются активными на ${date || '24.11.2026'} — будьте осторожны перед любыми переводами.`,
+      `Сайт, реклама или каналы проекта остаются активными на ${date || '24.11.2026'} — проверяйте реквизиты перед любыми переводами.`,
+    signInBtn: 'Войти',
+    signInWithGoogle: 'Войти через Google',
+    signOutBtn: 'Выйти',
+    adminPanelBtn: 'Админ',
+    adminPanelTitle: 'Панель администратора OtzyvTop',
+    adminModerationTab: 'Модерация',
+    adminImportTab: 'Импорт каталога',
+    authRequiredForReview: 'Войдите через Google, чтобы оставить отзыв и защитить каталог от накруток.',
+    authRequiredForReply: 'Войдите через Google, чтобы ответить на отзыв.',
+    authRequiredForCompany: 'Войдите через Google, чтобы добавить новую компанию в каталог.',
+    pendingModerationBadge: 'На модерации',
+    pendingSubmittedNotice: 'Отзыв отправлен и ожидает проверки модератора (вы видите его сразу).',
+    reviewMinLengthHint: 'Минимум 10 символов в тексте отзыва.',
+    commentMinLengthHint: 'Минимум 3 символа в тексте комментария.',
+    alreadyVotedNotice: 'Вы уже голосовали за этот отзыв.',
+    approveBtn: 'Одобрить',
+    rejectBtn: 'Отклонить',
+    deleteBtn: 'Удалить',
+    noPendingItems: 'Отзывов и комментариев в базе пока нет.',
+    importCatalogBtn: 'Импортировать каталог в Firestore',
+    importCatalogDesc: 'Одноразовая пакетная загрузка всех компаний и индексов категорий из локального каталога в Cloud Firestore.',
+    importDoneStatus: 'Каталог синхронизирован с Cloud Firestore.',
   },
   ua: {
     navHome: 'Головна',
@@ -252,7 +281,7 @@ export const UI_TEXT = {
     statReviews: 'Усього відгуків',
     categoriesTitle: 'Оберіть категорію бізнесу',
     categoriesSubtitle: 'Натисніть на галузь, щоб відкрити перевірені компанії та відгуки клієнтів',
-    scammerCardDesc: 'Реєстр скарг користувачів та недобросовісних проєктів за даними moshennik.eu',
+    scammerCardDesc: 'Реєстр скарг і недобросовісних проєктів: перевірка сайтів, реклами та доменів у мережі',
     openCategoryBtn: 'Відкрити розділ',
     companiesCountSuffix: (n: number) => `${n.toLocaleString('uk-UA')} компаній`,
     featuredTitle: 'Компанії в каталозі',
@@ -370,7 +399,7 @@ export const UI_TEXT = {
     topCitiesTitle: 'Міста з найбільшою кількістю компаній',
     close: 'Закрити',
     footerCopyright: 'OtzyvTop — каталог компаній України та чесні відгуки',
-    footerSource: 'Дані перевірено та синхронізовано з реєстром moshennik.eu',
+    footerSource: 'Актуальність сайтів, реклами та доменів перевірено у відкритих джерелах (24.11.2026)',
     mobileHome: 'Головна',
     mobileCatalog: 'Каталог',
     mobileAdd: 'Додати',
@@ -397,11 +426,40 @@ export const UI_TEXT = {
     websiteParkedLabel: 'Домен припаркований / змінений',
     activeIn2026: 'Працює у 2026',
     scamActiveStatus: 'Проєкт активний (2026)',
+    scamActiveAdsStatus: 'Активний · Реклама 2026',
     scamDefunctStatus: 'Не працює · Архів',
+    adsLabel: 'Реклама і трекери',
+    adsRunningSummary: (count: number, lastAt: string) =>
+      `Google Ads: ${count} ог. (показ до ${lastAt})`,
+    adsNoCampaignsNote: 'Активної реклами в Google Ads не виявлено',
+    domainHistoryLabel: 'Домен та архів',
+    tgChannelActiveLabel: 'Telegram-канал',
     archiveReviewsNotice: (date: string) =>
-      `За перевіркою на ${date || '24.11.2026'} компанія або її сайт не працюють. Нижче зібрано архівні відгуки за період активності.`,
+      `За перевіркою в мережі на ${date || '24.11.2026'} сайт і рекламна активність проєкту припинені. Нижче зібрано архівні відгуки за період роботи.`,
     scamActiveNotice: (date: string) =>
-      `Ресурс або канали проєкту залишаються активними станом на ${date || '24.11.2026'} — будьте обережні перед будь-якими переказами.`,
+      `Сайт, реклама або канали проєкту залишаються активними станом на ${date || '24.11.2026'} — перевіряйте реквізити перед будь-якими переказами.`,
+    signInBtn: 'Увійти',
+    signInWithGoogle: 'Увійти через Google',
+    signOutBtn: 'Вийти',
+    adminPanelBtn: 'Адмін',
+    adminPanelTitle: 'Панель адміністратора OtzyvTop',
+    adminModerationTab: 'Модерація',
+    adminImportTab: 'Імпорт каталогу',
+    authRequiredForReview: 'Увійдіть через Google, щоб залишити відгук і захистити каталог від накруток.',
+    authRequiredForReply: 'Увійдіть через Google, щоб відповісти на відгук.',
+    authRequiredForCompany: 'Увійдіть через Google, щоб додати нову компанію до каталогу.',
+    pendingModerationBadge: 'На модерації',
+    pendingSubmittedNotice: 'Відгук надіслано й він очікує перевірки модератора (ви бачите його одразу).',
+    reviewMinLengthHint: 'Мінімум 10 символів у тексті відгуку.',
+    commentMinLengthHint: 'Мінімум 3 символи у тексті коментаря.',
+    alreadyVotedNotice: 'Ви вже голосували за цей відгук.',
+    approveBtn: 'Схвалити',
+    rejectBtn: 'Відхилити',
+    deleteBtn: 'Видалити',
+    noPendingItems: 'Відгуків і коментарів у базі поки немає.',
+    importCatalogBtn: 'Імпортувати каталог у Firestore',
+    importCatalogDesc: 'Одноразове пакетне завантаження всіх компаній та індексів категорій із локального каталогу в Cloud Firestore.',
+    importDoneStatus: 'Каталог синхронізовано з Cloud Firestore.',
   },
 } as const;
 
@@ -412,7 +470,8 @@ export function localizeActiveYears(raw: string | undefined, lang: Language): st
   if (raw === 'Не работает в 2026') return 'Не працює у 2026';
   return raw
     .replace(/^Жалобы до\s+/i, 'Скарги до ')
-    .replace(/^Архив до\s+/i, 'Архів до ')
-    .replace(/^Не работает\s+\(до\s+/i, 'Не працює (до ')
-    .replace(/\(не работает\)/i, '(не працює)');
+    .replace(/^Архив\s+/i, 'Архів ')
+    .replace(/^Не работает\s+/i, 'Не працює ')
+    .replace(/\(не работает\)/i, '(не працює)')
+    .replace(/показ рекламы\s+/i, 'показ реклами ');
 }

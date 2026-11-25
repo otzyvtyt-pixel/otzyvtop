@@ -1,10 +1,14 @@
 import { useState, type FormEvent } from 'react';
 import { X } from '@phosphor-icons/react';
-import type { CategoryId, Company, Language } from '../types.ts';
+import type { AuthUser, CategoryId, Company, Language } from '../types.ts';
 import { CATEGORY_LABELS, CATEGORY_ORDER, UI_TEXT } from '../i18n.ts';
+import { database } from '../services/database.ts';
+import { VALIDATION_LIMITS } from '../utils/catalogLogic.ts';
 
 interface AddCompanyModalProps {
   lang: Language;
+  authUser: AuthUser | null;
+  onSignIn: () => Promise<void>;
   onClose: () => void;
   onAdded: (company: Company) => void;
   onSelectExisting: (companyId: number) => void;
@@ -12,6 +16,8 @@ interface AddCompanyModalProps {
 
 export function AddCompanyModal({
   lang,
+  authUser,
+  onSignIn,
   onClose,
   onAdded,
   onSelectExisting,
@@ -26,32 +32,43 @@ export function AddCompanyModal({
   const [description, setDescription] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [duplicate, setDuplicate] = useState<Company | null>(null);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !description.trim() || submitting) return;
+    if (!authUser) {
+      setErrorMsg(t.authRequiredForCompany);
+      return;
+    }
+    if (name.trim().length < VALIDATION_LIMITS.companyNameMin) {
+      setErrorMsg('Название должно содержать минимум 2 символа.');
+      return;
+    }
+    if (description.trim().length < VALIDATION_LIMITS.companyDescMin) {
+      setErrorMsg('Описание должно содержать минимум 10 символов.');
+      return;
+    }
+    if (submitting) return;
     setSubmitting(true);
     setDuplicate(null);
+    setErrorMsg(null);
     try {
-      const res = await fetch('/api/companies', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name,
-          category,
-          city,
-          website,
-          phone,
-          email,
-          description,
-        }),
+      const data = await database.addCompany({
+        name,
+        category,
+        city,
+        website,
+        phone,
+        email,
+        description,
       });
-      const data = (await res.json()) as { created: boolean; company: Company };
       if (!data.created) {
         setDuplicate(data.company);
       } else {
         onAdded(data.company);
       }
+    } catch (err) {
+      setErrorMsg(err instanceof Error ? err.message : 'Не удалось добавить компанию.');
     } finally {
       setSubmitting(false);
     }
@@ -83,6 +100,25 @@ export function AddCompanyModal({
         </div>
 
         <form onSubmit={handleSubmit} className="p-6 space-y-4">
+          {!authUser && (
+            <div className="p-3.5 rounded-xl border border-emerald-200 bg-emerald-50/70 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <p className="text-xs text-emerald-950">{t.authRequiredForCompany}</p>
+              <button
+                type="button"
+                onClick={() => void onSignIn()}
+                className="px-3.5 py-2 text-xs font-semibold bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 shrink-0 cursor-pointer"
+              >
+                {t.signInWithGoogle}
+              </button>
+            </div>
+          )}
+
+          {errorMsg && (
+            <div className="p-3 rounded-lg bg-rose-50 border border-rose-200 text-xs text-rose-800">
+              {errorMsg}
+            </div>
+          )}
+
           {duplicate && (
             <div className="p-3.5 rounded-lg border border-amber-300 bg-amber-50 flex items-center justify-between gap-3">
               <div className="text-xs text-amber-900">
@@ -108,6 +144,8 @@ export function AddCompanyModal({
               <input
                 type="text"
                 required
+                minLength={VALIDATION_LIMITS.companyNameMin}
+                maxLength={VALIDATION_LIMITS.companyNameMax}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder={t.companyNamePlaceholder}
@@ -140,6 +178,7 @@ export function AddCompanyModal({
               </label>
               <input
                 type="text"
+                maxLength={VALIDATION_LIMITS.companyCityMax}
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
                 placeholder={t.cityPlaceholder}
@@ -153,6 +192,7 @@ export function AddCompanyModal({
               </label>
               <input
                 type="text"
+                maxLength={VALIDATION_LIMITS.companyWebsiteMax}
                 value={website}
                 onChange={(e) => setWebsite(e.target.value)}
                 placeholder={t.websitePlaceholder}
@@ -168,6 +208,7 @@ export function AddCompanyModal({
               </label>
               <input
                 type="text"
+                maxLength={VALIDATION_LIMITS.companyPhoneMax}
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="+380..."
@@ -181,6 +222,7 @@ export function AddCompanyModal({
               </label>
               <input
                 type="email"
+                maxLength={VALIDATION_LIMITS.companyEmailMax}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="info@company.ua"
@@ -196,6 +238,8 @@ export function AddCompanyModal({
             <textarea
               required
               rows={3}
+              minLength={VALIDATION_LIMITS.companyDescMin}
+              maxLength={VALIDATION_LIMITS.companyDescMax}
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder={t.descriptionPlaceholder}
@@ -213,7 +257,7 @@ export function AddCompanyModal({
             </button>
             <button
               type="submit"
-              disabled={submitting || !name.trim() || !description.trim()}
+              disabled={submitting || !authUser || !name.trim() || !description.trim()}
               className="px-5 py-2.5 text-sm font-semibold text-white bg-emerald-600 rounded-xl hover:bg-emerald-700 disabled:opacity-50 transition-colors cursor-pointer"
             >
               {submitting ? t.submitting : t.submitCompany}

@@ -60,10 +60,14 @@ export function buildCompanyFaq(
             ? `Остання перевірка: ${checkedDateFormatted}.`
             : '';
 
+    const adsDetailUa =
+      company.adsCreativesCount && company.adsCreativesCount > 0 && company.adsLastAt
+        ? ` У Google Ads Transparency зафіксовано ${company.adsCreativesCount} оголошень (останній показ ${company.adsLastAt.split('-').reverse().join('.')}).`
+        : '';
     return [
       {
         q: `Який рейтинг та кількість відгуків у ${company.name}?`,
-        a: `На платформі OtzyvTop компанія ${company.name} має рейтинг ${company.averageRating.toFixed(1)} з 5 на основі ${company.reviewCount} відгуків у категорії «${catName}». ${statusDetail}`.trim(),
+        a: `На платформі OtzyvTop компанія ${company.name} має рейтинг ${company.averageRating.toFixed(1)} з 5 на основі ${company.reviewCount} відгуків у категорії «${catName}». ${statusDetail}${adsDetailUa}`.trim(),
       },
       {
         q: `Які актуальні контакти та сайт вказані для ${company.name}?`,
@@ -105,10 +109,15 @@ export function buildCompanyFaq(
           ? `Последняя проверка: ${checkedDateFormatted}.`
           : '';
 
+  const adsDetailRu =
+    company.adsCreativesCount && company.adsCreativesCount > 0 && company.adsLastAt
+      ? ` В Google Ads Transparency зафиксировано ${company.adsCreativesCount} объявлений (последний показ ${company.adsLastAt.split('-').reverse().join('.')}).`
+      : '';
+
   return [
     {
       q: `Какой рейтинг и сколько отзывов у ${company.name}?`,
-      a: `На платформе OtzyvTop компания ${company.name} имеет рейтинг ${company.averageRating.toFixed(1)} из 5 на основе ${company.reviewCount} отзывов в категории «${catName}». ${statusDetail}`.trim(),
+      a: `На платформе OtzyvTop компания ${company.name} имеет рейтинг ${company.averageRating.toFixed(1)} из 5 на основе ${company.reviewCount} отзывов в категории «${catName}». ${statusDetail}${adsDetailRu}`.trim(),
     },
     {
       q: `Какие актуальные контакты и сайт указаны для ${company.name}?`,
@@ -363,8 +372,8 @@ export function injectSeoIntoHtml(
           : `Мошенники и чёрный список компаний${locationSuffix} — проверка отзывов | OtzyvTop`;
       description =
         lang === 'ua'
-          ? `База з ${searchRes.total} скарг користувачів на недобросовісні компанії, сайти та контакти за даними moshennik.eu.`
-          : `База из ${searchRes.total} жалоб пользователей на недобросовестные компании, сайты и контакты по данным moshennik.eu.`;
+          ? `База з ${searchRes.total} скарг на недобросовісні компанії: актуальна перевірка сайтів, реклами Google Ads та історії доменів у відкритих джерелах.`
+          : `База из ${searchRes.total} жалоб на недобросовестные компании: актуальная проверка сайтов, рекламы Google Ads и истории доменов в открытых источниках.`;
     } else {
       title =
         lang === 'ua'

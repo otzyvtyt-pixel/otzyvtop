@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight, ListNumbers, ShieldWarning } from '@phosphor-icons/react';
-import type { Company, Language, SearchCompaniesResponse } from '../types.ts';
+import type { Company, Language } from '../types.ts';
 import { CATEGORY_LABELS, UI_TEXT } from '../i18n.ts';
 import { buildRouteUrl, RATING_GUIDES } from '../utils/seoSlug.ts';
+import { localizeCity } from '../utils/cityLocalization.ts';
+import { database } from '../services/database.ts';
 import {
   CategoryIcon,
   CATEGORY_TILE_BASE,
@@ -35,16 +37,15 @@ export function RatingsPage({
     if (!activeGuide) return;
     let cancelled = false;
     setLoading(true);
-    const params = new URLSearchParams({
-      category: activeGuide.category,
-      sort: activeGuide.isBlacklist ? 'featured' : 'rating',
-      limit: '15',
-    });
-    if (activeGuide.city) params.set('city', activeGuide.city);
 
-    fetch(`/api/companies?${params.toString()}`)
-      .then((res) => res.json())
-      .then((data: SearchCompaniesResponse) => {
+    database
+      .searchCompanies({
+        category: activeGuide.category,
+        city: activeGuide.city || '',
+        sort: activeGuide.isBlacklist ? 'featured' : 'rating',
+        limit: 15,
+      })
+      .then((data) => {
         if (!cancelled) setCompanies(data.items || []);
       })
       .catch(() => {
@@ -98,7 +99,7 @@ export function RatingsPage({
             <div>
               <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
                 {CATEGORY_LABELS[lang][activeGuide.category]}
-                {activeGuide.city ? ` · ${activeGuide.city}` : ''}
+                {activeGuide.city ? ` · ${localizeCity(activeGuide.city, lang)}` : ''}
               </p>
               <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 mt-0.5">
                 {title}

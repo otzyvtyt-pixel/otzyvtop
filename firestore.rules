@@ -1,0 +1,293 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global safety net: deny everything by default
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() >= 1 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerifiedUser() {
+      return isSignedIn() && request.auth.token.email_verified == true;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && uid is string && request.auth.uid == uid;
+    }
+
+    function isAdmin() {
+      return isSignedIn() &&
+        request.auth.token.email_verified == true && (
+          request.auth.token.email == 'otzyvtyt@gmail.com' ||
+          exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+        );
+    }
+
+    function isValidCategory(cat) {
+      return cat is string && cat in [
+        'shops', 'finance', 'delivery', 'food', 'beauty',
+        'auto', 'realestate', 'education', 'it', 'travel', 'scammers'
+      ];
+    }
+
+    function isValidCompany(data) {
+      return data.keys().hasAll([
+          'id', 'name', 'category', 'city', 'description',
+          'website', 'domain', 'phone', 'email', 'logoUrl',
+          'socials', 'status', 'statusNote', 'averageRating',
+          'reviewCount', 'sourceBatch', 'createdByUid', 'createdAt'
+        ]) &&
+        data.keys().hasOnly([
+          'id', 'name', 'category', 'city', 'description',
+          'website', 'domain', 'phone', 'email', 'logoUrl',
+          'socials', 'status', 'statusNote', 'averageRating',
+          'reviewCount', 'sourceBatch', 'createdByUid', 'createdAt',
+          'lastCheckedAt', 'websiteStatus', 'activeYears', 'scamActive',
+          'activityPeriodStart', 'activityPeriodEnd', 'adsActive',
+          'adsCreativesCount', 'adsFirstAt', 'adsLastAt', 'adPlatforms',
+          'domainRegisteredAt', 'domainExpiresAt', 'waybackLastAt', 'tgLastPostAt'
+        ]) &&
+        data.id is int && data.id > 0 &&
+        data.name is string && data.name.size() >= 2 && data.name.size() <= 160 &&
+        isValidCategory(data.category) &&
+        data.city is string && data.city.size() <= 80 &&
+        data.description is string && data.description.size() >= 10 && data.description.size() <= 2500 &&
+        data.website is string && data.website.size() <= 300 &&
+        data.domain is string && data.domain.size() <= 160 &&
+        data.phone is string && data.phone.size() <= 120 &&
+        data.email is string && data.email.size() <= 160 &&
+        data.logoUrl is string && data.logoUrl.size() <= 400 &&
+        data.socials is list && data.socials.size() <= 8 && (data.socials.size() == 0 || data.socials[0] is map) &&
+        data.status is string && data.status in ['active', 'closed'] &&
+        data.statusNote is string && data.statusNote.size() <= 600 &&
+        data.averageRating is number && data.averageRating >= 0 && data.averageRating <= 5 &&
+        data.reviewCount is int && data.reviewCount >= 0 &&
+        data.sourceBatch is string && data.sourceBatch.size() >= 1 && data.sourceBatch.size() <= 64 &&
+        data.createdByUid is string && data.createdByUid.size() >= 1 && data.createdByUid.size() <= 128 &&
+        data.createdAt is timestamp;
+    }
+
+    function isValidReview(data, reviewId) {
+      return data.keys().hasAll([
+          'id', 'companyId', 'author', 'authorUid', 'rating',
+          'pros', 'cons', 'text', 'confirmedPurchase', 'status',
+          'createdAt', 'helpfulCount', 'unhelpfulCount', 'comments'
+        ]) &&
+        data.keys().hasOnly([
+          'id', 'companyId', 'author', 'authorUid', 'rating',
+          'pros', 'cons', 'text', 'confirmedPurchase', 'status',
+          'createdAt', 'helpfulCount', 'unhelpfulCount', 'comments',
+          'moderatedAt', 'moderatedBy'
+        ]) &&
+        data.id == reviewId &&
+        data.companyId is int && data.companyId > 0 &&
+        data.author is string && data.author.size() >= 1 && data.author.size() <= 80 &&
+        data.authorUid is string && data.authorUid.size() >= 1 && data.authorUid.size() <= 128 &&
+        data.rating is number && data.rating >= 1 && data.rating <= 5 &&
+        data.pros is string && data.pros.size() <= 300 &&
+        data.cons is string && data.cons.size() <= 300 &&
+        data.text is string && data.text.size() >= 10 && data.text.size() <= 3000 &&
+        data.confirmedPurchase is bool &&
+        data.status is string && data.status in ['pending', 'approved', 'rejected'] &&
+        data.createdAt is timestamp &&
+        data.helpfulCount is int && data.helpfulCount >= 0 &&
+        data.unhelpfulCount is int && data.unhelpfulCount >= 0 &&
+        data.comments is list && data.comments.size() <= 50 &&
+        (!('moderatedAt' in data) || data.moderatedAt is timestamp) &&
+        (!('moderatedBy' in data) || (data.moderatedBy is string && data.moderatedBy.size() <= 128));
+    }
+
+    function isValidComment(data, commentId) {
+      return data.keys().hasAll([
+          'id', 'reviewId', 'companyId', 'author', 'authorUid',
+          'text', 'isOfficialReply', 'status', 'createdAt'
+        ]) &&
+        data.keys().hasOnly([
+          'id', 'reviewId', 'companyId', 'author', 'authorUid',
+          'text', 'isOfficialReply', 'status', 'createdAt'
+        ]) &&
+        data.id == commentId &&
+        isValidId(data.reviewId) &&
+        data.companyId is int && data.companyId > 0 &&
+        data.author is string && data.author.size() >= 1 && data.author.size() <= 80 &&
+        data.authorUid is string && data.authorUid.size() >= 1 && data.authorUid.size() <= 128 &&
+        data.text is string && data.text.size() >= 3 && data.text.size() <= 1500 &&
+        data.isOfficialReply is bool &&
+        data.status is string && data.status in ['pending', 'approved', 'rejected'] &&
+        data.createdAt is timestamp;
+    }
+
+    function isValidVote(data, voteId) {
+      return data.keys().hasAll(['reviewId', 'companyId', 'authorUid', 'vote', 'createdAt']) &&
+        data.keys().hasOnly(['reviewId', 'companyId', 'authorUid', 'vote', 'createdAt']) &&
+        isValidId(data.reviewId) &&
+        data.companyId is int && data.companyId > 0 &&
+        data.authorUid == request.auth.uid &&
+        voteId == data.reviewId + '_' + request.auth.uid &&
+        data.vote is string && data.vote in ['up', 'down'] &&
+        data.createdAt == request.time;
+    }
+
+    // Health-check document used by client connection check
+    match /test/{docId} {
+      allow get: if docId == 'connection';
+      allow list, write: if false;
+    }
+
+    // Precomputed public overview statistics
+    match /meta/{docId} {
+      allow get: if isValidId(docId) && docId == 'overview';
+      allow list: if false;
+      allow create, update, delete: if isAdmin() && isValidId(docId);
+    }
+
+    // Public category summaries
+    match /categories/{categoryId} {
+      allow get: if isValidId(categoryId);
+      allow list: if existing().id is string;
+      allow create, update, delete: if isAdmin() && isValidId(categoryId) && isValidCategory(categoryId);
+    }
+
+    // Compact category index shards (Spark-efficient search/filter)
+    match /catalogShards/{categoryId} {
+      allow get: if isValidId(categoryId);
+      allow list: if existing().category is string;
+      allow create, update, delete: if isAdmin() && isValidId(categoryId) && isValidCategory(categoryId);
+    }
+
+    // Public company directory
+    match /companies/{companyId} {
+      allow get: if isValidId(companyId);
+      allow list: if existing().id is int;
+      allow create: if isSignedIn() && isVerifiedUser() &&
+        isValidId(companyId) &&
+        !exists(/databases/$(database)/documents/companies/$(companyId)) &&
+        isValidCompany(incoming()) &&
+        incoming().createdByUid == request.auth.uid &&
+        incoming().createdAt == request.time &&
+        (
+          isAdmin() || (
+            incoming().sourceBatch == 'user' &&
+            incoming().status == 'active' &&
+            incoming().averageRating == 0 &&
+            incoming().reviewCount == 0
+          )
+        );
+      allow update: if isAdmin() && isValidId(companyId) && isValidCompany(incoming()) &&
+        incoming().id == existing().id &&
+        incoming().createdByUid == existing().createdByUid &&
+        incoming().createdAt == existing().createdAt;
+      allow delete: if isAdmin() && isValidId(companyId);
+    }
+
+    // Reviews: public can read approved reviews; signed-in authors see their own pending; only admins edit/moderate/delete
+    match /reviews/{reviewId} {
+      allow get: if isValidId(reviewId) && (
+        existing().status == 'approved' ||
+        isOwner(existing().authorUid) ||
+        isAdmin()
+      );
+      allow list: if existing().status == 'approved' ||
+        (isSignedIn() && existing().authorUid == request.auth.uid) ||
+        isAdmin();
+      allow create: if isSignedIn() && isVerifiedUser() &&
+        isValidId(reviewId) &&
+        !exists(/databases/$(database)/documents/reviews/$(reviewId)) &&
+        isValidReview(incoming(), reviewId) &&
+        incoming().authorUid == request.auth.uid &&
+        incoming().createdAt == request.time &&
+        incoming().helpfulCount == 0 &&
+        incoming().unhelpfulCount == 0 &&
+        incoming().comments.size() == 0 &&
+        (incoming().status == 'pending' || isAdmin());
+      allow update: if isValidId(reviewId) && isValidReview(incoming(), reviewId) && (
+        (
+          isAdmin() &&
+          incoming().id == existing().id &&
+          incoming().companyId == existing().companyId &&
+          incoming().authorUid == existing().authorUid &&
+          incoming().createdAt == existing().createdAt &&
+          incoming().diff(existing()).affectedKeys().hasOnly([
+            'status', 'rating', 'pros', 'cons', 'text', 'moderatedAt', 'moderatedBy'
+          ]) &&
+          (!('moderatedAt' in incoming()) || incoming().moderatedAt == request.time) &&
+          (!('moderatedBy' in incoming()) || incoming().moderatedBy == request.auth.uid)
+        ) || (
+          isSignedIn() && isVerifiedUser() &&
+          existing().status == 'approved' &&
+          incoming().id == existing().id &&
+          incoming().companyId == existing().companyId &&
+          incoming().authorUid == existing().authorUid &&
+          incoming().createdAt == existing().createdAt &&
+          existsAfter(/databases/$(database)/documents/reviewVotes/$(reviewId + '_' + request.auth.uid)) &&
+          (
+            (
+              incoming().diff(existing()).affectedKeys().hasOnly(['helpfulCount']) &&
+              incoming().helpfulCount == existing().helpfulCount + 1
+            ) || (
+              incoming().diff(existing()).affectedKeys().hasOnly(['unhelpfulCount']) &&
+              incoming().unhelpfulCount == existing().unhelpfulCount + 1
+            )
+          )
+        )
+      );
+      allow delete: if isAdmin() && isValidId(reviewId);
+    }
+
+    // Deduplicated per-user vote receipts
+    match /reviewVotes/{voteId} {
+      allow get: if isValidId(voteId) && (isOwner(existing().authorUid) || isAdmin());
+      allow list: if (isSignedIn() && existing().authorUid == request.auth.uid) || isAdmin();
+      allow create: if isSignedIn() && isVerifiedUser() &&
+        isValidId(voteId) &&
+        !exists(/databases/$(database)/documents/reviewVotes/$(voteId)) &&
+        isValidVote(incoming(), voteId);
+      allow update: if false;
+      allow delete: if isAdmin() && isValidId(voteId);
+    }
+
+    // Review comments and official company replies
+    match /reviewComments/{commentId} {
+      allow get: if isValidId(commentId) && (
+        existing().status == 'approved' ||
+        isOwner(existing().authorUid) ||
+        isAdmin()
+      );
+      allow list: if existing().status == 'approved' ||
+        (isSignedIn() && existing().authorUid == request.auth.uid) ||
+        isAdmin();
+      allow create: if isSignedIn() && isVerifiedUser() &&
+        isValidId(commentId) &&
+        !exists(/databases/$(database)/documents/reviewComments/$(commentId)) &&
+        isValidComment(incoming(), commentId) &&
+        incoming().authorUid == request.auth.uid &&
+        incoming().createdAt == request.time &&
+        (incoming().status == 'pending' || isAdmin());
+      allow update: if isAdmin() && isValidId(commentId) &&
+        isValidComment(incoming(), commentId) &&
+        incoming().diff(existing()).affectedKeys().hasOnly(['status', 'text', 'isOfficialReply']);
+      allow delete: if isAdmin() && isValidId(commentId);
+    }
+
+    // Admin marker collection
+    match /admins/{uid} {
+      allow get: if isSignedIn() && request.auth.uid == uid;
+      allow list, write: if false;
+    }
+  }
+}

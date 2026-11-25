@@ -6,22 +6,27 @@ import {
   ChatCenteredText,
   Check,
   CheckCircle,
+  ClockCounterClockwise,
   Code,
   Copy,
   EnvelopeSimple,
   Globe,
   MapPin,
+  Megaphone,
   PencilSimpleLine,
   Phone,
   ShieldWarning,
   ThumbsDown,
   ThumbsUp,
+  Trash,
   Warning,
 } from '@phosphor-icons/react';
-import type { CategoryId, Company, CompanyDetail, Language, Review } from '../types.ts';
+import type { AuthUser, CategoryId, Company, CompanyDetail, Language } from '../types.ts';
 import { CATEGORY_LABELS, UI_TEXT, localizeActiveYears } from '../i18n.ts';
 import { buildCompanyPath, buildRouteUrl, citySlug } from '../utils/seoSlug.ts';
 import { localizeCity } from '../utils/cityLocalization.ts';
+import { VALIDATION_LIMITS } from '../utils/catalogLogic.ts';
+import { database } from '../services/database.ts';
 import { CompanyLogo } from './CompanyLogo.tsx';
 import { CompanyCard } from './CompanyCard.tsx';
 import { StarRating } from './StarRating.tsx';
@@ -35,6 +40,8 @@ import { VerifiedShieldIcon } from './PremiumIcons.tsx';
 interface CompanyPageProps {
   companyId: number;
   lang: Language;
+  authUser: AuthUser | null;
+  onSignIn: () => Promise<void>;
   onBackToCatalog: (category?: CategoryId, city?: string) => void;
   onNavigateHome: () => void;
   onOpenCompany: (company: Company) => void;
@@ -44,6 +51,8 @@ interface CompanyPageProps {
 export function CompanyPage({
   companyId,
   lang,
+  authUser,
+  onSignIn,
   onBackToCatalog,
   onNavigateHome,
   onOpenCompany,
@@ -63,20 +72,22 @@ export function CompanyPage({
   const [confirmedPurchase, setConfirmedPurchase] = useState(false);
   const [text, setText] = useState('');
   const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitNotice, setSubmitNotice] = useState<string | null>(null);
+  const [voteNotice, setVoteNotice] = useState<string | null>(null);
 
   const [replyOpenId, setReplyOpenId] = useState<string | null>(null);
   const [replyAuthor, setReplyAuthor] = useState('');
   const [replyText, setReplyText] = useState('');
   const [replyOfficial, setReplyOfficial] = useState(false);
+  const [replyError, setReplyError] = useState<string | null>(null);
   const [reviewSort, setReviewSort] = useState<'newest' | 'oldest' | 'rating' | 'helpful'>('newest');
 
   const loadDetail = async () => {
     setLoading(true);
     setError(false);
     try {
-      const res = await fetch(`/api/companies/${companyId}`);
-      if (!res.ok) throw new Error('Failed to load');
-      const data = (await res.json()) as CompanyDetail;
+      const data = await database.getCompany(companyId);
       setDetail(data);
     } catch {
       setError(true);
@@ -89,7 +100,17 @@ export function CompanyPage({
     void loadDetail();
     window.scrollTo({ top: 0, behavior: 'smooth' });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [companyId]);
+  }, [companyId, authUser?.uid]);
+
+  useEffect(() => {
+    if (authUser?.displayName && !author) {
+      setAuthor(authUser.displayName);
+    }
+    if (authUser?.displayName && !replyAuthor) {
+      setReplyAuthor(authUser.displayName);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [authUser?.uid]);
 
   const handleCopy = async (field: 'phone' | 'email' | 'widget', value: string) => {
     try {
@@ -103,67 +124,118 @@ export function CompanyPage({
 
   const handleSubmitReview = async (e: FormEvent) => {
     e.preventDefault();
-    if (!text.trim() || submitting) return;
+    setSubmitError(null);
+    setSubmitNotice(null);
+    if (!authUser) {
+      setSubmitError(t.authRequiredForReview);
+      return;
+    }
+    if (text.trim().length < VALIDATION_LIMITS.reviewTextMin) {
+      setSubmitError(t.reviewMinLengthHint);
+      return;
+    }
+    if (submitting) return;
     setSubmitting(true);
     try {
-      const res = await fetch(`/api/companies/${companyId}/reviews`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          author,
-          rating,
-          pros,
-          cons,
-          text,
-          confirmedPurchase,
-        }),
+      const created = await database.addReview({
+        companyId,
+        author: author || authUser.displayName || 'Гость',
+        rating,
+        pros,
+        cons,
+        text,
+        confirmedPurchase,
       });
-      if (!res.ok) throw new Error('Submit failed');
-      setAuthor('');
       setRating(5);
       setPros('');
       setCons('');
       setConfirmedPurchase(false);
       setText('');
+      if (created.status === 'pending') {
+        setSubmitNotice(t.pendingSubmittedNotice);
+      }
       await loadDetail();
       onCompanyUpdated();
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : 'Ошибка публикации отзыва');
     } finally {
       setSubmitting(false);
     }
   };
 
   const handleVote = async (reviewId: string, vote: 'up' | 'down') => {
-    const res = await fetch(`/api/reviews/${reviewId}/vote`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ vote }),
-    });
-    if (!res.ok || !detail) return;
-    const updated = (await res.json()) as Review;
-    setDetail({
-      ...detail,
-      reviews: detail.reviews.map((r) => (r.id === reviewId ? updated : r)),
-    });
+    setVoteNotice(null);
+    if (!authUser) {
+      await onSignIn();
+      return;
+    }
+    try {
+      const res = await database.voteReview(reviewId, companyId, vote);
+      if (res.alreadyVoted) {
+        setVoteNotice(t.alreadyVotedNotice);
+        return;
+      }
+      if (!detail) return;
+      setDetail({
+        ...detail,
+        reviews: detail.reviews.map((r) => {
+          if (r.id !== reviewId) return r;
+          return {
+            ...r,
+            helpfulCount:
+              res.helpfulCount !== undefined
+                ? res.helpfulCount
+                : r.helpfulCount + (vote === 'up' ? 1 : 0),
+            unhelpfulCount:
+              res.unhelpfulCount !== undefined
+                ? res.unhelpfulCount
+                : r.unhelpfulCount + (vote === 'down' ? 1 : 0),
+          };
+        }),
+      });
+    } catch (err) {
+      setVoteNotice(err instanceof Error ? err.message : 'Ошибка голосования');
+    }
   };
 
   const handleReplySubmit = async (reviewId: string, e: FormEvent) => {
     e.preventDefault();
-    if (!replyText.trim()) return;
-    const res = await fetch(`/api/reviews/${reviewId}/comments`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        author: replyAuthor,
+    setReplyError(null);
+    if (!authUser) {
+      setReplyError(t.authRequiredForReply);
+      return;
+    }
+    if (replyText.trim().length < VALIDATION_LIMITS.commentTextMin) {
+      setReplyError(t.commentMinLengthHint);
+      return;
+    }
+    try {
+      await database.addReviewComment({
+        reviewId,
+        companyId,
+        author: replyAuthor || authUser.displayName || 'Гость',
         text: replyText,
         isOfficialReply: replyOfficial,
-      }),
-    });
-    if (!res.ok) return;
-    setReplyAuthor('');
-    setReplyText('');
-    setReplyOfficial(false);
-    setReplyOpenId(null);
+      });
+      setReplyText('');
+      setReplyOfficial(false);
+      setReplyOpenId(null);
+      await loadDetail();
+    } catch (err) {
+      setReplyError(err instanceof Error ? err.message : 'Ошибка отправки ответа');
+    }
+  };
+
+  const handleAdminDeleteReview = async (reviewId: string) => {
+    await database.deleteReview(reviewId);
     await loadDetail();
+    onCompanyUpdated();
+  };
+
+  const handleAdminApproveReview = async (reviewId: string) => {
+    await database.moderateReview(reviewId, 'approved');
+    await loadDetail();
+    onCompanyUpdated();
   };
 
   const formatDate = (iso: string) =>
@@ -220,6 +292,7 @@ export function CompanyPage({
   const formattedCheckDate = detail.lastCheckedAt
     ? detail.lastCheckedAt.split('-').reverse().join('.')
     : '';
+  const fmtDotDate = (iso?: string) => (iso ? iso.split('-').reverse().join('.') : '');
   const formattedActiveYears = localizeActiveYears(detail.activeYears, lang);
   const websiteStatusLabel =
     detail.websiteStatus === 'ok' || detail.websiteStatus === 'protected'
@@ -229,6 +302,26 @@ export function CompanyPage({
         : detail.websiteStatus === 'parked'
           ? t.websiteParkedLabel
           : '';
+  const extraAdPlatforms = (detail.adPlatforms || []).filter(
+    (p) => !(detail.adsCreativesCount && detail.adsCreativesCount > 0 && p === 'Google Ads'),
+  );
+  const adSummaryParts = [
+    detail.adsCreativesCount && detail.adsCreativesCount > 0 && detail.adsLastAt
+      ? t.adsRunningSummary(detail.adsCreativesCount, fmtDotDate(detail.adsLastAt))
+      : '',
+    extraAdPlatforms.length > 0 ? extraAdPlatforms.join(', ') : '',
+  ].filter(Boolean);
+  const domainHistoryParts = [
+    detail.domainRegisteredAt
+      ? `${lang === 'ua' ? 'реєстрація' : 'регистрация'} ${fmtDotDate(detail.domainRegisteredAt)}`
+      : '',
+    detail.domainExpiresAt
+      ? `${lang === 'ua' ? 'до' : 'до'} ${fmtDotDate(detail.domainExpiresAt)}`
+      : '',
+    detail.waybackLastAt
+      ? `${lang === 'ua' ? 'архів' : 'архив'} ${fmtDotDate(detail.waybackLastAt)}`
+      : '',
+  ].filter(Boolean);
 
   const homeHref = buildRouteUrl({ view: 'home' }, lang);
   const catHref = buildRouteUrl({ view: 'catalog', category: detail.category }, lang);
@@ -264,8 +357,8 @@ export function CompanyPage({
               : `Чи працює ${detail.name} зараз та як перевірити перед оплатою?`,
             a: isScammer
               ? isDefunctScammer
-                ? `Так, запис внесено до реєстру скарг («Шахраї»). За даними перевірки ${formattedCheckDate || '24.11.2026'} сайт або проєкт уже не працює (${formattedActiveYears || 'архів'}). Відгуки нижче відображають період його активності.`
-                : `Так, запис внесено до реєстру скарг («Шахраї»), а ресурс залишається активним станом на ${formattedCheckDate || '24.11.2026'}. Перед будь-якими переказами перевіряйте юридичні реквізити та не надсилайте передоплату без офіційного договору.`
+                ? `Так, запис внесено до реєстру скарг («Шахраї»). За даними перевірки в мережі ${formattedCheckDate || '24.11.2026'} сайт не працює і рекламна активність не ведеться (${formattedActiveYears || 'архів'}). Відгуки нижче відображають період його роботи.`
+                : `Так, запис внесено до реєстру скарг («Шахраї»), а ресурс залишається активним станом на ${formattedCheckDate || '24.11.2026'}.${detail.adsCreativesCount ? ` У Google Ads Transparency зафіксовано ${detail.adsCreativesCount} рекламних оголошень (останній показ ${fmtDotDate(detail.adsLastAt)}).` : ''} Перед переказами перевіряйте юридичні реквізити.`
               : `${websiteStatusLabel ? `Статус перевірки: ${websiteStatusLabel}${formattedActiveYears ? ` (${formattedActiveYears})` : ''}. ` : ''}Перед оплатою звірте домен, телефон і прочитайте свіжі відгуки клієнтів за датами у профілі компанії.`,
           },
           {
@@ -279,7 +372,7 @@ export function CompanyPage({
             a: `На платформе OtzyvTop компания ${detail.name} имеет рейтинг ${detail.averageRating.toFixed(1)} из 5 на основе ${detail.reviewCount} отзывов.${formattedCheckDate ? ` Актуальность данных и сайта проверена ${formattedCheckDate}.` : ''}`,
           },
           {
-            q: `Какие контакты указаны для ${detail.name}?`,
+            q: `Какие актуальные контакты указаны для ${detail.name}?`,
             a: contactParts.length
               ? `В карточке компании указаны: ${contactParts.join(', ')}${localizedCity ? ` (${localizedCity})` : ''}.`
               : `Официальные контакты ${detail.name} уточняются или отсутствуют в открытом доступе.`,
@@ -290,8 +383,8 @@ export function CompanyPage({
               : `Работает ли ${detail.name} сейчас и как проверить до оплаты?`,
             a: isScammer
               ? isDefunctScammer
-                ? `Да, компания находится в реестре жалоб («Мошенники»). По данным проверки ${formattedCheckDate || '24.11.2026'} сайт или проект больше не работает (${formattedActiveYears || 'архив'}), а отзывы датированы периодом прежней активности.`
-                : `Да, компания находится в реестре жалоб («Мошенники»), и проект остаётся активным на ${formattedCheckDate || '24.11.2026'}. Перед любыми переводами проверяйте юридические реквизиты и избегайте предоплаты на карты физлиц.`
+                ? `Да, компания находится в реестре жалоб («Мошенники»). По данным проверки в сети от ${formattedCheckDate || '24.11.2026'} сайт не работает и активная реклама не ведётся (${formattedActiveYears || 'архив'}), а отзывы датированы периодом прежней активности.`
+                : `Да, компания находится в реестре жалоб («Мошенники»), и проект остаётся активным на ${formattedCheckDate || '24.11.2026'}.${detail.adsCreativesCount ? ` В Google Ads Transparency зафиксировано ${detail.adsCreativesCount} рекламных объявлений (последний показ ${fmtDotDate(detail.adsLastAt)}).` : ''} Перед переводами проверяйте юридические реквизиты.`
               : `${websiteStatusLabel ? `Статус проверки: ${websiteStatusLabel}${formattedActiveYears ? ` (${formattedActiveYears})` : ''}. ` : ''}Перед оплатой сверьте официальный домен, телефон и изучите свежие отзывы клиентов по датам в этом профиле.`,
           },
           {
@@ -525,7 +618,40 @@ export function CompanyPage({
             className="bg-white border border-emerald-950/10 rounded-2xl p-6 sm:p-8 shadow-xs"
           >
             <form onSubmit={handleSubmitReview} className="space-y-5">
-              <h2 className="text-lg font-bold text-slate-900">{t.writeReviewTitle}</h2>
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <h2 className="text-lg font-bold text-slate-900">{t.writeReviewTitle}</h2>
+                {authUser && (
+                  <span className="text-xs text-slate-500">
+                    {authUser.displayName || authUser.email}
+                  </span>
+                )}
+              </div>
+
+              {!authUser && (
+                <div className="p-4 rounded-xl border border-emerald-200 bg-emerald-50/70 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <p className="text-xs text-emerald-950 leading-relaxed">
+                    {t.authRequiredForReview}
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => void onSignIn()}
+                    className="px-4 py-2 text-xs font-semibold text-white bg-emerald-600 rounded-xl hover:bg-emerald-700 shrink-0 cursor-pointer"
+                  >
+                    {t.signInWithGoogle}
+                  </button>
+                </div>
+              )}
+
+              {submitError && (
+                <div className="p-3 rounded-xl bg-rose-50 border border-rose-200 text-xs text-rose-800">
+                  {submitError}
+                </div>
+              )}
+              {submitNotice && (
+                <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-900">
+                  {submitNotice}
+                </div>
+              )}
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
@@ -534,6 +660,7 @@ export function CompanyPage({
                   </label>
                   <input
                     type="text"
+                    maxLength={VALIDATION_LIMITS.reviewAuthorMax}
                     value={author}
                     onChange={(e) => setAuthor(e.target.value)}
                     placeholder={t.namePlaceholder}
@@ -564,6 +691,7 @@ export function CompanyPage({
                   </label>
                   <input
                     type="text"
+                    maxLength={VALIDATION_LIMITS.reviewProsConsMax}
                     value={pros}
                     onChange={(e) => setPros(e.target.value)}
                     placeholder={t.prosPlaceholder}
@@ -576,6 +704,7 @@ export function CompanyPage({
                   </label>
                   <input
                     type="text"
+                    maxLength={VALIDATION_LIMITS.reviewProsConsMax}
                     value={cons}
                     onChange={(e) => setCons(e.target.value)}
                     placeholder={t.consPlaceholder}
@@ -590,6 +719,8 @@ export function CompanyPage({
                 </label>
                 <textarea
                   required
+                  minLength={VALIDATION_LIMITS.reviewTextMin}
+                  maxLength={VALIDATION_LIMITS.reviewTextMax}
                   rows={3}
                   value={text}
                   onChange={(e) => setText(e.target.value)}
@@ -611,7 +742,7 @@ export function CompanyPage({
 
                 <button
                   type="submit"
-                  disabled={submitting || !text.trim()}
+                  disabled={submitting || !authUser || text.trim().length < VALIDATION_LIMITS.reviewTextMin}
                   className="px-6 py-2.5 text-sm font-semibold text-white bg-emerald-600 rounded-xl hover:bg-emerald-700 disabled:opacity-50 transition-colors cursor-pointer whitespace-nowrap"
                 >
                   {submitting ? t.submitting : t.submitReview}
@@ -665,6 +796,12 @@ export function CompanyPage({
               </div>
             )}
 
+            {voteNotice && (
+              <div className="p-3 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900">
+                {voteNotice}
+              </div>
+            )}
+
             {detail.reviews.length === 0 ? (
               <div className="py-10 text-center border border-dashed border-emerald-200 rounded-xl bg-emerald-50/30 px-4">
                 <p className="text-sm font-semibold text-slate-800">
@@ -702,6 +839,11 @@ export function CompanyPage({
                         <span className="font-semibold text-slate-900">
                           {rev.author}
                         </span>
+                        {rev.status === 'pending' && (
+                          <span className="px-2 py-0.5 text-[11px] font-semibold bg-amber-100 text-amber-900 rounded-md">
+                            {t.pendingModerationBadge}
+                          </span>
+                        )}
                         {rev.confirmedPurchase && (
                           <>
                             <span aria-hidden="true" className="text-slate-300">
@@ -720,7 +862,30 @@ export function CompanyPage({
                           {formatDate(rev.createdAt)}
                         </span>
                       </div>
-                      <StarRating rating={rev.rating} size="sm" />
+                      <div className="flex items-center gap-2.5">
+                        <StarRating rating={rev.rating} size="sm" />
+                        {authUser?.isAdmin && !rev.id.startsWith('seed_') && (
+                          <div className="flex items-center gap-1">
+                            {rev.status !== 'approved' && (
+                              <button
+                                type="button"
+                                onClick={() => void handleAdminApproveReview(rev.id)}
+                                className="px-2 py-0.5 text-[11px] font-semibold bg-emerald-600 text-white rounded hover:bg-emerald-700 cursor-pointer"
+                              >
+                                {t.approveBtn}
+                              </button>
+                            )}
+                            <button
+                              type="button"
+                              onClick={() => void handleAdminDeleteReview(rev.id)}
+                              className="p-1 text-rose-600 hover:bg-rose-50 rounded cursor-pointer"
+                              aria-label={t.deleteBtn}
+                            >
+                              <Trash className="w-3.5 h-3.5" />
+                            </button>
+                          </div>
+                        )}
+                      </div>
                     </div>
 
                     <p className="text-sm text-slate-800 leading-relaxed">{rev.text}</p>
@@ -745,7 +910,7 @@ export function CompanyPage({
                     <div className="flex flex-wrap items-center gap-4 pt-1 text-xs text-slate-500">
                       <button
                         type="button"
-                        onClick={() => handleVote(rev.id, 'up')}
+                        onClick={() => void handleVote(rev.id, 'up')}
                         className="inline-flex items-center gap-1.5 hover:text-emerald-700 transition-colors cursor-pointer tabular-nums"
                       >
                         <ThumbsUp weight="regular" className="w-3.5 h-3.5" aria-hidden="true" />
@@ -755,7 +920,7 @@ export function CompanyPage({
                       </button>
                       <button
                         type="button"
-                        onClick={() => handleVote(rev.id, 'down')}
+                        onClick={() => void handleVote(rev.id, 'down')}
                         className="inline-flex items-center gap-1.5 hover:text-slate-800 transition-colors cursor-pointer tabular-nums"
                       >
                         <ThumbsDown weight="regular" className="w-3.5 h-3.5" aria-hidden="true" />
@@ -765,9 +930,10 @@ export function CompanyPage({
                       </button>
                       <button
                         type="button"
-                        onClick={() =>
-                          setReplyOpenId(replyOpenId === rev.id ? null : rev.id)
-                        }
+                        onClick={() => {
+                          setReplyError(null);
+                          setReplyOpenId(replyOpenId === rev.id ? null : rev.id);
+                        }}
                         className="inline-flex items-center gap-1.5 hover:text-emerald-700 transition-colors cursor-pointer"
                       >
                         <ChatCenteredText weight="regular" className="w-3.5 h-3.5" aria-hidden="true" />
@@ -790,6 +956,11 @@ export function CompanyPage({
                               <span className="font-semibold text-slate-900">
                                 {cmt.author}
                               </span>
+                              {cmt.status === 'pending' && (
+                                <span className="px-1.5 py-0.5 text-[10px] font-semibold bg-amber-100 text-amber-900 rounded">
+                                  {t.pendingModerationBadge}
+                                </span>
+                              )}
                               {cmt.isOfficialReply && (
                                 <span className="font-semibold text-emerald-700">
                                   · {t.officialReplyLabel}
@@ -811,49 +982,70 @@ export function CompanyPage({
                         onSubmit={(e) => handleReplySubmit(rev.id, e)}
                         className="pt-2 space-y-3 bg-slate-50/80 p-3.5 rounded-xl border border-slate-200"
                       >
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                          <input
-                            type="text"
-                            value={replyAuthor}
-                            onChange={(e) => setReplyAuthor(e.target.value)}
-                            placeholder={t.namePlaceholder}
-                            className="px-3 py-2 text-xs bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-emerald-600"
-                          />
-                          <input
-                            type="text"
-                            required
-                            value={replyText}
-                            onChange={(e) => setReplyText(e.target.value)}
-                            placeholder={t.replyPlaceholder}
-                            className="sm:col-span-2 px-3 py-2 text-xs bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-emerald-600"
-                          />
-                        </div>
-                        <div className="flex flex-wrap items-center justify-between gap-2">
-                          <label className="inline-flex items-center gap-2 text-xs text-slate-600 cursor-pointer">
-                            <input
-                              type="checkbox"
-                              checked={replyOfficial}
-                              onChange={(e) => setReplyOfficial(e.target.checked)}
-                              className="w-3.5 h-3.5 rounded border-slate-300 text-emerald-600"
-                            />
-                            <span>{t.officialReplyOption}</span>
-                          </label>
-                          <div className="flex items-center gap-2">
+                        {!authUser ? (
+                          <div className="flex flex-wrap items-center justify-between gap-2 text-xs">
+                            <span className="text-slate-600">{t.authRequiredForReply}</span>
                             <button
                               type="button"
-                              onClick={() => setReplyOpenId(null)}
-                              className="px-3 py-1.5 text-xs text-slate-600 hover:text-slate-900 cursor-pointer"
+                              onClick={() => void onSignIn()}
+                              className="px-3 py-1.5 font-semibold bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 cursor-pointer"
                             >
-                              {t.cancel}
-                            </button>
-                            <button
-                              type="submit"
-                              className="px-3.5 py-1.5 text-xs font-semibold bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 cursor-pointer"
-                            >
-                              {t.sendReply}
+                              {t.signInWithGoogle}
                             </button>
                           </div>
-                        </div>
+                        ) : (
+                          <>
+                            {replyError && (
+                              <p className="text-xs text-rose-700">{replyError}</p>
+                            )}
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                              <input
+                                type="text"
+                                maxLength={VALIDATION_LIMITS.reviewAuthorMax}
+                                value={replyAuthor}
+                                onChange={(e) => setReplyAuthor(e.target.value)}
+                                placeholder={t.namePlaceholder}
+                                className="px-3 py-2 text-xs bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-emerald-600"
+                              />
+                              <input
+                                type="text"
+                                required
+                                minLength={VALIDATION_LIMITS.commentTextMin}
+                                maxLength={VALIDATION_LIMITS.commentTextMax}
+                                value={replyText}
+                                onChange={(e) => setReplyText(e.target.value)}
+                                placeholder={t.replyPlaceholder}
+                                className="sm:col-span-2 px-3 py-2 text-xs bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-emerald-600"
+                              />
+                            </div>
+                            <div className="flex flex-wrap items-center justify-between gap-2">
+                              <label className="inline-flex items-center gap-2 text-xs text-slate-600 cursor-pointer">
+                                <input
+                                  type="checkbox"
+                                  checked={replyOfficial}
+                                  onChange={(e) => setReplyOfficial(e.target.checked)}
+                                  className="w-3.5 h-3.5 rounded border-slate-300 text-emerald-600"
+                                />
+                                <span>{t.officialReplyOption}</span>
+                              </label>
+                              <div className="flex items-center gap-2">
+                                <button
+                                  type="button"
+                                  onClick={() => setReplyOpenId(null)}
+                                  className="px-3 py-1.5 text-xs text-slate-600 hover:text-slate-900 cursor-pointer"
+                                >
+                                  {t.cancel}
+                                </button>
+                                <button
+                                  type="submit"
+                                  className="px-3.5 py-1.5 text-xs font-semibold bg-emerald-600 text-white rounded-lg hover:bg-emerald-700 cursor-pointer"
+                                >
+                                  {t.sendReply}
+                                </button>
+                              </div>
+                            </div>
+                          </>
+                        )}
                       </form>
                     )}
                   </article>
@@ -1021,6 +1213,48 @@ export function CompanyPage({
                     {[formattedCheckDate, websiteStatusLabel, formattedActiveYears]
                       .filter(Boolean)
                       .join(' · ')}
+                  </dd>
+                </div>
+              </div>
+            )}
+
+            {adSummaryParts.length > 0 && (
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-emerald-950/[0.035] border border-emerald-900/10 flex items-center justify-center shrink-0">
+                  <Megaphone weight="duotone" className="w-4 h-4 text-emerald-800" aria-hidden="true" />
+                </div>
+                <div className="min-w-0">
+                  <dt className="text-[11px] text-slate-500">{t.adsLabel}</dt>
+                  <dd className="text-xs font-medium text-slate-800 tabular-nums">
+                    {adSummaryParts.join(' · ')}
+                  </dd>
+                </div>
+              </div>
+            )}
+
+            {domainHistoryParts.length > 0 && (
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-emerald-950/[0.035] border border-emerald-900/10 flex items-center justify-center shrink-0">
+                  <ClockCounterClockwise weight="duotone" className="w-4 h-4 text-emerald-800" aria-hidden="true" />
+                </div>
+                <div className="min-w-0">
+                  <dt className="text-[11px] text-slate-500">{t.domainHistoryLabel}</dt>
+                  <dd className="text-xs font-medium text-slate-800 tabular-nums">
+                    {domainHistoryParts.join(' · ')}
+                  </dd>
+                </div>
+              </div>
+            )}
+
+            {detail.tgLastPostAt && (
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-emerald-950/[0.035] border border-emerald-900/10 flex items-center justify-center shrink-0">
+                  <CalendarCheck weight="duotone" className="w-4 h-4 text-emerald-800" aria-hidden="true" />
+                </div>
+                <div className="min-w-0">
+                  <dt className="text-[11px] text-slate-500">{t.tgChannelActiveLabel}</dt>
+                  <dd className="text-xs font-medium text-slate-800 tabular-nums">
+                    {`${lang === 'ua' ? 'пост від' : 'пост от'} ${fmtDotDate(detail.tgLastPostAt)}`}
                   </dd>
                 </div>
               </div>

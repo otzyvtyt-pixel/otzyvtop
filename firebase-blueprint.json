@@ -1,0 +1,182 @@
+{
+  "entities": {
+    "OverviewMeta": {
+      "title": "OverviewMeta",
+      "description": "Precomputed catalog statistics and featured company summaries for the OtzyvTop home page.",
+      "type": "object",
+      "properties": {
+        "totalCompanies": { "type": "number", "description": "Total number of companies in catalog." },
+        "totalReviews": { "type": "number", "description": "Total number of reviews across catalog." },
+        "totalCities": { "type": "number", "description": "Count of distinct cities." },
+        "activeCompanies": { "type": "number", "description": "Count of non-closed companies." },
+        "byCategory": { "type": "object", "description": "Company counts keyed by category ID." },
+        "topCities": { "type": "array", "description": "Top cities sorted by company count." },
+        "featuredCompanies": { "type": "array", "description": "Featured company preview records." },
+        "availableCities": { "type": "array", "description": "Top available cities for filtering." },
+        "updatedAt": { "type": "string", "format": "date-time", "description": "Last aggregation timestamp." }
+      },
+      "required": ["totalCompanies", "totalReviews", "totalCities", "activeCompanies", "byCategory", "topCities", "featuredCompanies"]
+    },
+    "CategoryMeta": {
+      "title": "CategoryMeta",
+      "description": "Category descriptor and aggregate count.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "enum": ["shops", "finance", "delivery", "food", "beauty", "auto", "realestate", "education", "it", "travel", "scammers"],
+          "maxLength": 32
+        },
+        "count": { "type": "number" },
+        "sortOrder": { "type": "number" },
+        "nameRu": { "type": "string", "maxLength": 120 },
+        "nameUa": { "type": "string", "maxLength": 120 }
+      },
+      "required": ["id", "count", "sortOrder", "nameRu", "nameUa"]
+    },
+    "CatalogShard": {
+      "title": "CatalogShard",
+      "description": "Compact per-category company index shard for Spark-efficient catalog search and pagination.",
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": ["shops", "finance", "delivery", "food", "beauty", "auto", "realestate", "education", "it", "travel", "scammers"],
+          "maxLength": 32
+        },
+        "count": { "type": "number" },
+        "items": { "type": "array", "description": "Bounded array of compact company index entries in this category." },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["category", "count", "items"]
+    },
+    "Company": {
+      "title": "Company",
+      "description": "Verified business or flagged project record in the OtzyvTop catalog.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "number" },
+        "name": { "type": "string", "minLength": 2, "maxLength": 160 },
+        "category": {
+          "type": "string",
+          "enum": ["shops", "finance", "delivery", "food", "beauty", "auto", "realestate", "education", "it", "travel", "scammers"],
+          "maxLength": 32
+        },
+        "city": { "type": "string", "maxLength": 80 },
+        "description": { "type": "string", "minLength": 10, "maxLength": 2500 },
+        "website": { "type": "string", "maxLength": 300 },
+        "domain": { "type": "string", "maxLength": 160 },
+        "phone": { "type": "string", "maxLength": 120 },
+        "email": { "type": "string", "maxLength": 160 },
+        "logoUrl": { "type": "string", "maxLength": 400 },
+        "socials": { "type": "array" },
+        "status": { "type": "string", "enum": ["active", "closed"], "maxLength": 24 },
+        "statusNote": { "type": "string", "maxLength": 600 },
+        "averageRating": { "type": "number" },
+        "reviewCount": { "type": "number" },
+        "sourceBatch": { "type": "string", "maxLength": 64 },
+        "createdByUid": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "name", "category", "city", "description", "website", "domain", "phone", "email", "logoUrl", "socials", "status", "statusNote", "averageRating", "reviewCount", "sourceBatch", "createdByUid", "createdAt"]
+    },
+    "Review": {
+      "title": "Review",
+      "description": "User-submitted or moderated review linked to a company.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 3, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "companyId": { "type": "number" },
+        "author": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "authorUid": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "rating": { "type": "number" },
+        "pros": { "type": "string", "maxLength": 300 },
+        "cons": { "type": "string", "maxLength": 300 },
+        "text": { "type": "string", "minLength": 10, "maxLength": 3000 },
+        "confirmedPurchase": { "type": "boolean" },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected"], "maxLength": 24 },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "helpfulCount": { "type": "number" },
+        "unhelpfulCount": { "type": "number" },
+        "comments": { "type": "array" },
+        "moderatedAt": { "type": "string", "format": "date-time" },
+        "moderatedBy": { "type": "string", "maxLength": 128 }
+      },
+      "required": ["id", "companyId", "author", "authorUid", "rating", "pros", "cons", "text", "confirmedPurchase", "status", "createdAt", "helpfulCount", "unhelpfulCount", "comments"]
+    },
+    "ReviewVote": {
+      "title": "ReviewVote",
+      "description": "Per-user helpful/unhelpful vote preventing duplicate votes.",
+      "type": "object",
+      "properties": {
+        "reviewId": { "type": "string", "minLength": 3, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "companyId": { "type": "number" },
+        "authorUid": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "vote": { "type": "string", "enum": ["up", "down"], "maxLength": 8 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["reviewId", "companyId", "authorUid", "vote", "createdAt"]
+    },
+    "ReviewComment": {
+      "title": "ReviewComment",
+      "description": "Reply or official company response attached to a review.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "minLength": 3, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "reviewId": { "type": "string", "minLength": 3, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "companyId": { "type": "number" },
+        "author": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "authorUid": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "text": { "type": "string", "minLength": 3, "maxLength": 1500 },
+        "isOfficialReply": { "type": "boolean" },
+        "status": { "type": "string", "enum": ["pending", "approved", "rejected"], "maxLength": 24 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["id", "reviewId", "companyId", "author", "authorUid", "text", "isOfficialReply", "status", "createdAt"]
+    },
+    "AdminEntry": {
+      "title": "AdminEntry",
+      "description": "Marker document granting admin moderation access for a UID.",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "maxLength": 160 },
+        "grantedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["email"]
+    }
+  },
+  "firestore": {
+    "/meta/{docId}": {
+      "schema": { "$ref": "#/entities/OverviewMeta" },
+      "description": "Precomputed catalog statistics document (overview)."
+    },
+    "/categories/{categoryId}": {
+      "schema": { "$ref": "#/entities/CategoryMeta" },
+      "description": "Public category counts and localized labels."
+    },
+    "/catalogShards/{categoryId}": {
+      "schema": { "$ref": "#/entities/CatalogShard" },
+      "description": "Compact category index shards for low-read client filtering and search."
+    },
+    "/companies/{companyId}": {
+      "schema": { "$ref": "#/entities/Company" },
+      "description": "Individual canonical company documents."
+    },
+    "/reviews/{reviewId}": {
+      "schema": { "$ref": "#/entities/Review" },
+      "description": "User-submitted and moderated reviews."
+    },
+    "/reviewVotes/{voteId}": {
+      "schema": { "$ref": "#/entities/ReviewVote" },
+      "description": "Deduplicated per-user vote receipts keyed as {reviewId}_{uid}."
+    },
+    "/reviewComments/{commentId}": {
+      "schema": { "$ref": "#/entities/ReviewComment" },
+      "description": "Replies and official representative comments on reviews."
+    },
+    "/admins/{uid}": {
+      "schema": { "$ref": "#/entities/AdminEntry" },
+      "description": "Admin role marker documents."
+    }
+  }
+}

@@ -13,6 +13,8 @@ export type CategoryId =
   | 'travel'
   | 'scammers';
 
+export type ModerationStatus = 'pending' | 'approved' | 'rejected';
+
 export interface SocialLink {
   label: string;
   url: string;
@@ -20,9 +22,13 @@ export interface SocialLink {
 
 export interface ReviewComment {
   id: string;
+  reviewId?: string;
+  companyId?: number;
   author: string;
+  authorUid?: string;
   text: string;
   isOfficialReply?: boolean;
+  status?: ModerationStatus;
   createdAt: string;
 }
 
@@ -30,11 +36,13 @@ export interface Review {
   id: string;
   companyId: number;
   author: string;
+  authorUid?: string;
   rating: number;
   pros: string;
   cons: string;
   text: string;
   confirmedPurchase: boolean;
+  status?: ModerationStatus;
   createdAt: string;
   helpfulCount: number;
   unhelpfulCount: number;
@@ -61,9 +69,20 @@ export interface Company {
   scamActive?: boolean;
   activityPeriodStart?: string;
   activityPeriodEnd?: string;
+  adsActive?: boolean;
+  adsCreativesCount?: number;
+  adsFirstAt?: string;
+  adsLastAt?: string;
+  adPlatforms?: string[];
+  domainRegisteredAt?: string;
+  domainExpiresAt?: string;
+  waybackLastAt?: string;
+  tgLastPostAt?: string;
   averageRating: number;
   reviewCount: number;
   sourceBatch: string;
+  createdByUid?: string;
+  createdAt?: string;
 }
 
 export interface CompanyDetail extends Company {
@@ -80,6 +99,7 @@ export interface OverviewStats {
   byCategory: Record<CategoryId, number>;
   topCities: Array<{ city: string; count: number }>;
   featuredCompanies: Company[];
+  availableCities?: string[];
 }
 
 export interface SearchCompaniesResponse {
@@ -90,4 +110,13 @@ export interface SearchCompaniesResponse {
   totalPages: number;
   availableCities: string[];
   resolvedCity?: string;
+}
+
+export interface AuthUser {
+  uid: string;
+  email: string | null;
+  displayName: string | null;
+  photoURL: string | null;
+  emailVerified: boolean;
+  isAdmin: boolean;
 }

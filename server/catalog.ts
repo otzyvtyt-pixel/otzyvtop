@@ -67,6 +67,15 @@ interface RawCompany {
   scamActive?: unknown;
   activityPeriodStart?: unknown;
   activityPeriodEnd?: unknown;
+  adsActive?: unknown;
+  adsCreativesCount?: unknown;
+  adsFirstAt?: unknown;
+  adsLastAt?: unknown;
+  adPlatforms?: unknown;
+  domainRegisteredAt?: unknown;
+  domainExpiresAt?: unknown;
+  waybackLastAt?: unknown;
+  tgLastPostAt?: unknown;
   _source_batch?: unknown;
 }
 
@@ -245,6 +254,27 @@ class CatalogStore {
           typeof entry.activityPeriodEnd === 'string'
             ? entry.activityPeriodEnd.trim()
             : '';
+        const adsActive =
+          typeof entry.adsActive === 'boolean' ? entry.adsActive : undefined;
+        const adsCreativesCount =
+          typeof entry.adsCreativesCount === 'number' && Number.isFinite(entry.adsCreativesCount)
+            ? entry.adsCreativesCount
+            : undefined;
+        const adsFirstAt =
+          typeof entry.adsFirstAt === 'string' ? entry.adsFirstAt.trim() : '';
+        const adsLastAt =
+          typeof entry.adsLastAt === 'string' ? entry.adsLastAt.trim() : '';
+        const adPlatforms = Array.isArray(entry.adPlatforms)
+          ? entry.adPlatforms.filter((p): p is string => typeof p === 'string' && p.trim().length > 0)
+          : [];
+        const domainRegisteredAt =
+          typeof entry.domainRegisteredAt === 'string' ? entry.domainRegisteredAt.trim() : '';
+        const domainExpiresAt =
+          typeof entry.domainExpiresAt === 'string' ? entry.domainExpiresAt.trim() : '';
+        const waybackLastAt =
+          typeof entry.waybackLastAt === 'string' ? entry.waybackLastAt.trim() : '';
+        const tgLastPostAt =
+          typeof entry.tgLastPostAt === 'string' ? entry.tgLastPostAt.trim() : '';
         const sourceBatch =
           typeof entry._source_batch === 'string' && entry._source_batch.trim()
             ? entry._source_batch.trim()
@@ -284,6 +314,15 @@ class CatalogStore {
             ...(scamActive !== undefined ? { scamActive } : {}),
             ...(activityPeriodStart ? { activityPeriodStart } : {}),
             ...(activityPeriodEnd ? { activityPeriodEnd } : {}),
+            ...(adsActive !== undefined ? { adsActive } : {}),
+            ...(adsCreativesCount !== undefined ? { adsCreativesCount } : {}),
+            ...(adsFirstAt ? { adsFirstAt } : {}),
+            ...(adsLastAt ? { adsLastAt } : {}),
+            ...(adPlatforms.length > 0 ? { adPlatforms } : {}),
+            ...(domainRegisteredAt ? { domainRegisteredAt } : {}),
+            ...(domainExpiresAt ? { domainExpiresAt } : {}),
+            ...(waybackLastAt ? { waybackLastAt } : {}),
+            ...(tgLastPostAt ? { tgLastPostAt } : {}),
             averageRating: 0,
             reviewCount: 0,
             sourceBatch,

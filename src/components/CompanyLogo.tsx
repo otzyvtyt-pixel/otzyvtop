@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { resolveLogoUrl } from '../utils/catalogLogic.ts';
 
 interface CompanyLogoProps {
   name: string;
@@ -33,6 +34,7 @@ function hashColor(name: string): string {
 
 export function CompanyLogo({ name, logoUrl, size = 'md' }: CompanyLogoProps) {
   const [failed, setFailed] = useState(false);
+  const resolvedUrl = resolveLogoUrl(logoUrl, '');
 
   const dims =
     size === 'lg'
@@ -41,7 +43,7 @@ export function CompanyLogo({ name, logoUrl, size = 'md' }: CompanyLogoProps) {
         ? 'w-9 h-9 text-xs rounded-lg'
         : 'w-12 h-12 text-sm rounded-xl';
 
-  if (!logoUrl || failed) {
+  if (!resolvedUrl || failed) {
     return (
       <div
         className={`${dims} ${hashColor(name)} shrink-0 flex items-center justify-center font-display font-bold tracking-tight shadow-xs select-none`}
@@ -57,7 +59,7 @@ export function CompanyLogo({ name, logoUrl, size = 'md' }: CompanyLogoProps) {
       className={`${dims} shrink-0 bg-white border border-emerald-100 shadow-xs flex items-center justify-center overflow-hidden p-1.5`}
     >
       <img
-        src={logoUrl}
+        src={resolvedUrl}
         alt={name}
         referrerPolicy="no-referrer"
         onError={() => setFailed(true)}

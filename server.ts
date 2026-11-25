@@ -66,7 +66,8 @@ async function startServer() {
     const domain = typeof req.query.domain === 'string' ? req.query.domain : '';
     const icon = await fetchCachedFavicon(domain);
     if (!icon) {
-      res.status(404).end();
+      res.setHeader('Cache-Control', 'public, max-age=86400');
+      res.status(204).end();
       return;
     }
     res.setHeader('Cache-Control', 'public, max-age=604800, immutable');

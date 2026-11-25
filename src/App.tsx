@@ -6,10 +6,14 @@ import {
   ChartBar,
   House,
   Plus,
+  ShieldCheck,
+  SignIn,
+  SignOut,
   SquaresFour,
   X,
 } from '@phosphor-icons/react';
 import type {
+  AuthUser,
   CategoryId,
   Company,
   Language,
@@ -22,6 +26,7 @@ import {
   QUICK_SEARCHES,
   UI_TEXT,
 } from './i18n.ts';
+import { database } from './services/database.ts';
 import {
   CategoryIcon,
   CATEGORY_TILE_BASE,
@@ -41,6 +46,7 @@ import { CompanyPage } from './components/CompanyPage.tsx';
 import { RatingsPage } from './components/RatingsPage.tsx';
 import { AddCompanyModal } from './components/AddCompanyModal.tsx';
 import { OverviewModal } from './components/OverviewModal.tsx';
+import { AdminModal } from './components/AdminModal.tsx';
 import {
   buildCompanyPath,
   buildRouteUrl,
@@ -100,10 +106,15 @@ export function App() {
   const [sortBy, setSortBy] = useState('featured');
   const [page, setPage] = useState(1);
 
+  const [authUser, setAuthUser] = useState<AuthUser | null>(() => database.getCurrentUser());
   const [showAddModal, setShowAddModal] = useState(false);
   const [showStatsModal, setShowStatsModal] = useState(false);
+  const [showAdminModal, setShowAdminModal] = useState(false);
 
   useEffect(() => {
+    const unsubscribeAuth = database.onAuthChange((user) => {
+      setAuthUser(user);
+    });
     if (initialLoc.upgradedFromHash) {
       window.history.replaceState(null, '', buildRouteUrl(initialLoc.route, initialLoc.lang));
     }
@@ -121,7 +132,10 @@ export function App() {
       }
     };
     window.addEventListener('popstate', onPopState);
-    return () => window.removeEventListener('popstate', onPopState);
+    return () => {
+      unsubscribeAuth();
+      window.removeEventListener('popstate', onPopState);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -253,9 +267,7 @@ export function App() {
 
   const fetchOverview = useCallback(async () => {
     try {
-      const res = await fetch('/api/overview');
-      if (!res.ok) return;
-      const data = (await res.json()) as OverviewStats;
+      const data = await database.getOverview();
       setOverview(data);
     } catch {
       // handled gracefully
@@ -266,18 +278,15 @@ export function App() {
     setLoadingCatalog(true);
     setCatalogError(false);
     try {
-      const params = new URLSearchParams();
-      if (activeQuery) params.set('q', activeQuery);
-      if (selectedCategory !== 'all') params.set('category', selectedCategory);
-      if (selectedCity) params.set('city', selectedCity);
-      if (selectedStatus !== 'all') params.set('status', selectedStatus);
-      if (sortBy) params.set('sort', sortBy);
-      params.set('page', String(page));
-      params.set('limit', '24');
-
-      const res = await fetch(`/api/companies?${params.toString()}`);
-      if (!res.ok) throw new Error('Failed');
-      const data = (await res.json()) as SearchCompaniesResponse;
+      const data = await database.searchCompanies({
+        q: activeQuery,
+        category: selectedCategory !== 'all' ? selectedCategory : undefined,
+        city: selectedCity || undefined,
+        status: selectedStatus !== 'all' ? selectedStatus : undefined,
+        sort: sortBy,
+        page,
+        limit: 24,
+      });
       setSearchResult(data);
     } catch {
       setCatalogError(true);
@@ -304,9 +313,7 @@ export function App() {
     }
     const timer = setTimeout(async () => {
       try {
-        const res = await fetch(`/api/companies/suggest?q=${encodeURIComponent(q)}`);
-        if (!res.ok) return;
-        const data = (await res.json()) as Company[];
+        const data = await database.suggestCompanies(q);
         setSuggestions(data);
       } catch {
         setSuggestions([]);
@@ -314,6 +321,21 @@ export function App() {
     }, 180);
     return () => clearTimeout(timer);
   }, [queryInput]);
+
+  const handleSignIn = async () => {
+    try {
+      const user = await database.signInWithGoogle();
+      setAuthUser(user);
+    } catch {
+      // popup cancelled or blocked
+    }
+  };
+
+  const handleSignOut = async () => {
+    await database.signOut();
+    setAuthUser(null);
+    setShowAdminModal(false);
+  };
 
   const handleHeroSearch = (e: FormEvent) => {
     e.preventDefault();
@@ -427,14 +449,51 @@ export function App() {
             </button>
           </nav>
 
-          <button
-            type="button"
-            onClick={() => setShowAddModal(true)}
-            className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-white bg-emerald-600 rounded-xl hover:bg-emerald-700 shadow-xs transition-colors whitespace-nowrap shrink-0 cursor-pointer"
-          >
-            <Plus weight="bold" className="w-3.5 h-3.5" aria-hidden="true" />
-            <span>{t.addCompanyBtn}</span>
-          </button>
+          <div className="flex items-center gap-2.5 shrink-0">
+            {authUser?.isAdmin && (
+              <button
+                type="button"
+                onClick={() => setShowAdminModal(true)}
+                className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-emerald-900 bg-emerald-50 border border-emerald-900/15 rounded-xl hover:bg-emerald-100 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+              >
+                <ShieldCheck weight="duotone" className="w-4 h-4 text-emerald-700" aria-hidden="true" />
+                <span className="hidden sm:inline">{t.adminPanelBtn}</span>
+              </button>
+            )}
+
+            {authUser ? (
+              <button
+                type="button"
+                onClick={() => void handleSignOut()}
+                title={authUser.email || authUser.displayName || ''}
+                className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-slate-700 bg-slate-50 border border-slate-200 rounded-xl hover:bg-slate-100 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+              >
+                <span className="hidden lg:inline max-w-[120px] truncate">
+                  {authUser.displayName || authUser.email}
+                </span>
+                <SignOut weight="regular" className="w-3.5 h-3.5 text-slate-500" aria-hidden="true" />
+                <span className="lg:hidden">{t.signOutBtn}</span>
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => void handleSignIn()}
+                className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-emerald-900 bg-white border border-emerald-950/15 rounded-xl hover:border-emerald-600/40 hover:bg-emerald-50/50 transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+              >
+                <SignIn weight="regular" className="w-3.5 h-3.5 text-emerald-700" aria-hidden="true" />
+                <span>{t.signInBtn}</span>
+              </button>
+            )}
+
+            <button
+              type="button"
+              onClick={() => setShowAddModal(true)}
+              className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-white bg-emerald-600 rounded-xl hover:bg-emerald-700 shadow-xs transition-colors whitespace-nowrap shrink-0 cursor-pointer"
+            >
+              <Plus weight="bold" className="w-3.5 h-3.5" aria-hidden="true" />
+              <span>{t.addCompanyBtn}</span>
+            </button>
+          </div>
         </div>
       </header>
 
@@ -1199,6 +1258,8 @@ export function App() {
           <CompanyPage
             companyId={route.companyId}
             lang={lang}
+            authUser={authUser}
+            onSignIn={handleSignIn}
             onBackToCatalog={(cat, cityName) =>
               goCatalog({ category: cat || 'all', city: cityName || '' })
             }
@@ -1302,6 +1363,8 @@ export function App() {
       {showAddModal && (
         <AddCompanyModal
           lang={lang}
+          authUser={authUser}
+          onSignIn={handleSignIn}
           onClose={() => setShowAddModal(false)}
           onAdded={handleAddedCompany}
           onSelectExisting={(existingId) => {
@@ -1318,6 +1381,14 @@ export function App() {
           onSelectCategory={(cat) => goCatalog({ category: cat })}
           onSelectCity={(city) => goCatalog({ city })}
           onClose={() => setShowStatsModal(false)}
+        />
+      )}
+
+      {showAdminModal && authUser?.isAdmin && (
+        <AdminModal
+          lang={lang}
+          onClose={() => setShowAdminModal(false)}
+          onDataChanged={handleCompanyUpdated}
         />
       )}
     </div>

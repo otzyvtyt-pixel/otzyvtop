@@ -95,7 +95,11 @@ export function CompanyCard({ company, lang, rank, onOpen }: CompanyCardProps) {
         <div className="flex items-center gap-2 shrink-0 tabular-nums">
           {isScammer ? (
             <span className={`font-semibold ${isDefunctScammer ? 'text-slate-600' : 'text-rose-700'}`}>
-              {isDefunctScammer ? t.scamDefunctStatus : t.statusScammer}
+              {isDefunctScammer
+                ? t.scamDefunctStatus
+                : company.adsActive
+                  ? t.scamActiveAdsStatus
+                  : t.statusScammer}
             </span>
           ) : isClosed ? (
             <span className="text-rose-700 font-semibold">{t.statusClosed}</span>
